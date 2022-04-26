@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <title>Inicio Sesión Cliente | Realstravels</title>
+    <title>Registrarse Empresa | Realstravels</title>
   </head>
   <body class="body">
     <nav class="nav">
@@ -82,98 +82,38 @@
       </div>
     </nav>
 
-    <section
-      class="grid grid-cols-6 justify-center items-center gap-4 lg:gap-8 py-10 px-6 h-max"
-    >
-      <div class="form-img-container">
-        <img src="../images/lamp.png" alt="" class="form-img" />
+    <main class="grid grid-cols-12 items-center justify-center p-12 gap-4">
+      <h1 class="col-span-full title">¡Bienvenido!</h1>
+      <div class="col-span-full w-full flex justify-center items-center">
+        <div class="h-[2px] w-1/2 md:w-1/3 bg-black dark:bg-white"></div>
       </div>
-      <form action="" class="forn client-auth-form">
-        <h2 id="contact" class="form-title">Registro</h2>
-        <div class="input-container">
-          <input
-            type="text"
-            id="client-singup-text"
-            placeholder="Nombre de Usuario"
-            class="input focus dark-text peer-input peer"
-            required
-          />
-          <label for="client-singup-text" class="label peer-label dark-text">
-            Nombre de Usuario
-          </label>
-        </div>
-        <div class="input-container">
-          <input
-            type="email"
-            id="client-signup-email"
-            placeholder="Correo Electronico"
-            class="input focus dark-text peer-input peer"
-            required
-          />
-          <label for="client-signup-email" class="label peer-label dark-text">
-            Correo Electronico
-          </label>
-        </div>
-        <div class="input-container">
-          <input
-            type="tel"
-            id="client-signup-phone"
-            placeholder="Número Telefonico"
-            class="input focus dark-text peer-input peer"
-            required
-          />
-          <label for="client-signup-phone" class="label peer-label dark-text">
-            Número Telefonico
-          </label>
-        </div>
-        <div class="input-container">
-          <input
-            type="password"
-            id="client-signup-password"
-            placeholder="Contraseña"
-            class="input focus dark-text peer-input peer"
-            required
-          />
-          <label
-            for="client-signup-password"
-            class="label peer-label dark-text"
-          >
-            Contraseña
-          </label>
-          <p class="text-xs mt-2 ml-1">
-            Al menos 4 caracteres, 1 número y 1 minúscula
-          </p>
-        </div>
-        <div class="input-container">
-          <input
-            type="password"
-            id="client-signup-password-con"
-            placeholder="Confirmar Contraseña"
-            class="input focus dark-text peer-input peer"
-            required
-          />
-          <label
-            for="client-signup-password-con"
-            class="label peer-label dark-text"
-          >
-            Confirmar Contraseña
-          </label>
-        </div>
-        <input
-          type="submit"
-          value="Enviar"
-          class="standard-btn focus mt-4 text-center ml-auto"
-        />
-        <div class="form-links-container">
-          <a href="./client-login.html" class="hover-undeline"
-            >Iniciar Sesion</a
-          >
-          <a href="./business-singup.html" class="hover-undeline">
-            Registrarse Como Empresa
-          </a>
-        </div>
-      </form>
-    </section>
+      <p class="col-span-full mb-8 text-center subtitle-2">
+        Por favor, Haga clic sobre la imagen que representa el negocio que
+        quiere registrar
+      </p>
+      <div
+        class="col-span-full sm:col-span-6 w-full h-max p-4 bg-neutral-100 dark:bg-neutral-900 shadow-md rounded-md"
+      >
+        <a href="./hotel-singup.html" class="block w-full h-72"
+          ><img
+            src="../images/placeholder.jpg"
+            alt=""
+            class="h-full w-full object-cover object-center rounded-sm hover:scale-[0.98] transition-all"
+        /></a>
+        <p class="text-center">Hoteles, cabañas, resorts, apartamentos</p>
+      </div>
+      <div
+        class="col-span-full sm:col-span-6 w-full h-max p-4 bg-neutral-100 dark:bg-neutral-900 shadow-md rounded-md"
+      >
+        <a href="/" class="block w-full h-72"
+          ><img
+            src="../images/placeholder.jpg"
+            alt=""
+            class="h-full w-full object-cover object-center rounded-sm hover:scale-[0.98] transition-all"
+        /></a>
+        <p class="text-center">Agencias de turismo</p>
+      </div>
+    </main>
 
     <footer class="footer">
       <button id="theme-btn" class="theme-btn focus">
