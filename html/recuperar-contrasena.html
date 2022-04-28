@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <title>Inicio Sesión Cliente | Realstravels</title>
+    <title>Recuperar Contraseña | Realstravels</title>
   </head>
   <body class="body">
     <nav class="nav">
@@ -82,14 +82,33 @@
       </div>
     </nav>
 
-    <section
-      class="grid grid-cols-6 justify-center items-center gap-4 lg:gap-8 py-10 px-6 h-max"
-    >
-      <div class="form-img-container">
-        <img src="../images/lamp.png" alt="" class="form-img" />
+    <main class="grid grid-cols-12 items-center justify-center p-12 gap-4">
+      <h1 class="col-span-full title">Recuperar Contraseña</h1>
+      <div class="col-span-full w-full flex justify-center items-center">
+        <div class="h-[2px] w-1/2 md:w-1/3 bg-black dark:bg-white"></div>
       </div>
-      <form action="" class="form client-auth-form">
-        <h2 id="contact" class="form-title">Iniciar Sesión</h2>
+      <p class="col-span-full mb-8 text-center subtitle-2">
+        Por favor, digite el correo electronico con el que se ha registrado en
+        la plataforma
+      </p>
+      <form
+        action=""
+        class="form w-max col-span-full sm:col-start-3 sm:col-span-8 lg:col-start-4 lg:col-span-6"
+      >
+        <div class="flex flex-row justify-start gap-4">
+          <div class="flex flex-row justify-start items-center gap-2">
+            <input type="radio" name="business" id="pass-rec-cliente" />
+            <label for="pass-rec-cliente">Cliente</label>
+          </div>
+          <div class="flex flex-row justify-start items-center gap-2">
+            <input type="radio" name="business" id="pass-rec-alojamiento" />
+            <label for="pass-rec-alojamiento">Alojamiento</label>
+          </div>
+          <div class="flex flex-row justify-start items-center gap-2">
+            <input type="radio" name="business" id="pass-rec-agencia" />
+            <label for="pass-rec-agencia">Agencia</label>
+          </div>
+        </div>
         <div class="input-container">
           <input
             type="email"
@@ -102,34 +121,14 @@
             Correo Electronico
           </label>
         </div>
-        <div class="input-container">
-          <input
-            type="password"
-            id="client-password"
-            placeholder="Contraseña"
-            class="input focus dark-text peer-input peer"
-            required
-          />
-          <label for="client-password" class="label peer-label dark-text">
-            Contraseña
-          </label>
-        </div>
+
         <input
           type="submit"
-          value="Enviar"
+          value="Recuperar Contraseña"
           class="standard-btn focus mt-4 text-center ml-auto"
         />
-        <div class="form-links-container">
-          <a href="./recuperar-contrasena.html" class="hover-undeline"
-            >¿Olvidó Su Contraseña?</a
-          >
-          <a href="./client-signup.html" class="hover-undeline">Registrarse</a>
-          <a href="./business-login.html" class="hover-undeline">
-            Iniciar Sesión Como Empresa
-          </a>
-        </div>
       </form>
-    </section>
+    </main>
 
     <footer class="footer">
       <button id="theme-btn" class="theme-btn focus">

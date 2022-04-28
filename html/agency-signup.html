@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registro Alojamiento | Realstravels</title>
+    <title>Registro Agencia | Realstravels</title>
   </head>
   <body class="body">
     <nav class="nav">
@@ -77,7 +77,7 @@
     </nav>
 
     <main class="mt-4 mb-12 px-4">
-      <h1 class="subtitle my-8">Registrar Alojamiento</h1>
+      <h1 class="subtitle my-8">Registrar Agencia</h1>
       <form
         action=""
         class="grid grid-cols-12 items-start justify-center gap-8"
@@ -86,50 +86,122 @@
           <h2 class="form-section-title">General</h2>
 
           <div class="input-container-2">
-            <label for="nit-alojamiento" class="label"> NIT </label>
+            <label for="nit-agencia" class="label"> NIT </label>
             <input
               type="number"
-              id="nit-alojamiento"
+              id="nit-agencia"
               class="input focus dark-text"
               required
             />
           </div>
 
           <div class="input-container-2">
-            <label for="rtn-alojamiento" class="label"> RTN </label>
+            <label for="rtn-agencia" class="label"> RTN </label>
             <input
               type="number"
-              id="rtn-alojamiento"
+              id="rtn-agencia"
               class="input focus dark-text"
               required
             />
           </div>
 
           <div class="input-container-2">
-            <label for="nom-alojamiento" class="label">
-              Nombre Alojamiento
+            <label for="nom-agencia" class="label"> Nombre Agencia </label>
+            <input
+              type="text"
+              id="nom-agencia"
+              class="input focus dark-text"
+              required
+            />
+          </div>
+
+          <div class="input-container-2">
+            <label for="tel-agencia" class="label"> Teléfono Agencia </label>
+            <input
+              type="tel"
+              id="tel-agencia"
+              class="input focus dark-text"
+              required
+            />
+          </div>
+
+          <div class="input-container-2">
+            <label for="email-agencia" class="label">
+              Correo Electronico Agencia
+            </label>
+            <input
+              type="email"
+              id="email-agencia"
+              class="input focus dark-text"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-section-container">
+          <h2 class="form-section-title">Contacto</h2>
+          <div class="input-container-2">
+            <label for="nom-admin-agencia" class="label">
+              Nombre Administrador
             </label>
             <input
               type="text"
-              id="nom-alojamiento"
+              id="nom-admin-agencia"
               class="input focus dark-text"
               required
             />
           </div>
 
           <div class="input-container-2">
-            <label for="dir-alojamiento" class="label"> Dirección </label>
+            <label for="tel-admin-agencia" class="label">
+              Teléfono Administración
+            </label>
+            <input
+              type="tel"
+              id="tel-admin-agencia"
+              class="input focus dark-text"
+              required
+            />
+          </div>
+
+          <div class="input-container-2">
+            <label for="email-admin-agencia" class="label">
+              Correo Electronico
+            </label>
+            <input
+              type="email"
+              id="email-admin-agencia"
+              class="input focus dark-text"
+              required
+            />
+          </div>
+
+          <div class="input-container-2">
+            <label for="password-agencia" class="label"> Contraseña </label>
+            <input
+              type="password"
+              id="password-agencia"
+              class="input focus dark-text"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-section-container">
+          <h2 class="form-section-title">Descripción</h2>
+          <div class="input-container-2">
+            <label for="dir-agencia" class="label"> Dirección </label>
             <input
               type="text"
-              id="dir-alojamiento"
+              id="dir-agencia"
               class="input focus dark-text"
               required
             />
           </div>
 
           <div class="input-container-2">
-            <label for="dep-alojamiento" class="label">Departamento</label>
-            <select name="dep-alojamiento" class="form-select focus">
+            <label for="dep-agencia" class="label">Departamento</label>
+            <select name="dep-agencia" class="form-select focus">
               <option value="" selected disabled hidden>
                 Seleccione Un Departamento
               </option>
@@ -140,8 +212,8 @@
           </div>
 
           <div class="input-container-2">
-            <label for="cid-alojamiento" class="label">Ciudad</label>
-            <select name="cid-alojamiento" class="form-select focus">
+            <label for="city-agencia" class="label">Ciudad</label>
+            <select name="city-agencia" class="form-select focus">
               <option value="" selected disabled hidden>
                 Seleccione Una Ciudad
               </option>
@@ -150,149 +222,14 @@
               <option value="">Opcion 3</option>
             </select>
           </div>
-        </div>
-
-        <div class="form-section-container">
-          <h2 class="form-section-title">Contacto</h2>
-          <div class="input-container-2">
-            <label for="nom-admin" class="label"> Nombre Administrador </label>
-            <input
-              type="text"
-              id="nom-admin"
-              class="input focus dark-text"
-              required
-            />
-          </div>
 
           <div class="input-container-2">
-            <label for="tel-admin" class="label">
-              Teléfono Administrador
-            </label>
-            <input
-              type="tel"
-              id="tel-admin"
-              class="input focus dark-text"
-              required
-            />
-          </div>
-
-          <div class="input-container-2">
-            <label for="tel-alojamiento" class="label">
-              Teléfono Alojamiento
-            </label>
-            <input
-              type="tel"
-              id="tel-alojamiento"
-              class="input focus dark-text"
-              required
-            />
-          </div>
-
-          <div class="input-container-2">
-            <label for="cel-alojamiento" class="label">
-              Celular Alojamiento
-            </label>
-            <input
-              type="tel"
-              id="cel-alojamiento"
-              class="input focus dark-text"
-              required
-            />
-          </div>
-
-          <div class="input-container-2">
-            <label for="email-alojamiento" class="label">
-              Correo Electronico Alojamiento
-            </label>
-            <input
-              type="email"
-              id="email-alojamiento"
-              class="input focus dark-text"
-              required
-            />
-          </div>
-
-          <div class="input-container-2">
-            <label for="pass-alojamiento" class="label"> Contraseña </label>
-            <input
-              type="password"
-              id="pass-alojamiento"
-              class="input focus dark-text"
-              required
-            />
-          </div>
-        </div>
-
-        <div class="form-section-container">
-          <h2 class="form-section-title">Descripción</h2>
-          <div class="input-container-2">
-            <label for="num-pisos-alojamiento" class="label">
-              Nro De Pisos
-            </label>
-            <input
-              type="number"
-              id="num-pisos-alojamiento"
-              class="input focus dark-text"
-              required
-            />
-          </div>
-
-          <div class="input-container-2">
-            <label for="hab-alojamiento" class="label">
-              Habitaciones Por Piso
-            </label>
-            <input
-              type="number"
-              id="hab-alojamiento"
-              class="input focus dark-text"
-              required
-            />
-          </div>
-
-          <div class="input-container-2">
-            <label for="cupo-alojamiento" class="label">
-              Cupo De Personas
-            </label>
-            <input
-              type="number"
-              id="cupo-alojamiento"
-              class="input focus dark-text"
-              required
-            />
-          </div>
-
-          <div class="input-container-2">
-            <label for="neg-alojamiento" class="label">Tipo De Negocio</label>
-            <select name="neg-alojamiento" class="form-select focus">
-              <option value="" selected disabled hidden>
-                Seleccione Un Tipo
-              </option>
-              <option value="">Opcion 1</option>
-              <option value="">Opcion 2</option>
-              <option value="">Opcion 3</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-section-container">
-          <h2 class="form-section-title">Descripción</h2>
-          <div class="input-container-2">
-            <label for="desc-alojamiento" class="label"> Alojamiento </label>
+            <label for="desc-gencia" class="label"> Oferta De Servicios </label>
             <textarea
-              name="desc-alojamiento"
-              id="desc-alojamiento"
+              name="desc-agencia"
+              id="desc-agencia"
               class="textarea focus dark-text"
-              placeholder="Describe por qué los clientes deben preferir tu alojamiento"
-            ></textarea>
-          </div>
-
-          <div class="input-container-2">
-            <label for="desc-cer-alojamiento" class="label"> Cercanias </label>
-            <textarea
-              name="desc-cer-alojamiento"
-              id="desc-cer-alojamiento"
-              class="textarea focus dark-text"
-              placeholder="Describe un poco de lo que el cliente puede encontrar en el entorno del alojamiento"
+              placeholder="Describe por qué los clientes deben preferir tu agencia"
             ></textarea>
           </div>
         </div>
@@ -319,7 +256,7 @@
           </div>
           <input
             type="submit"
-            value="Registrar Alojamiento"
+            value="Registrar Agencia"
             class="standard-btn focus mt-4 text-center ml-auto"
           />
         </div>

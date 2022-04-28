@@ -145,7 +145,7 @@ input[type="submit"] {
 }
 
 /* Form */
-.forn {
+.form {
   @apply h-max w-full flex flex-col border-8 border-neutral-900 dark:border-neutral-100 p-8 rounded-md shadow-md;
 }
 
@@ -205,4 +205,12 @@ input[type="submit"] {
 
 .form-img {
   @apply sm:w-3/5 lg:w-1/3;
+}
+
+.form-section-container {
+  @apply container col-span-full sm:col-span-6 lg:col-span-3 w-full h-max bg-neutral-200 dark:bg-neutral-900 rounded-lg p-4;
+}
+
+.form-section-title {
+  @apply text-xl font-semibold bg-amber-500 py-2 rounded-md text-center dark-text;
 }
