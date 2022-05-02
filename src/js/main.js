@@ -1,4 +1,5 @@
 import "../styles/style.css";
+import "../styles/mklb.css";
 
 //Theme Selectors
 const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
