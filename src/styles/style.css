@@ -87,7 +87,7 @@ input[type="submit"] {
 /* Component styling */
 /* Body */
 .body {
-  @apply relative bg-neutral-50 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-50 text-base;
+  @apply relative bg-neutral-50 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-50 text-base font-sans;
 }
 
 /* Nav */
