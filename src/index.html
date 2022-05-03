@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="es" id="dark-selector">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -10,27 +10,35 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <title>Realstravels | Inicio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Inicio | Realstravels</title>
   </head>
-  <body class="body">
-    <nav class="nav">
+  <body class="os-body">
+    <nav class="os-nav">
       <div class="mx-auto flex items-center justify-between">
-        <a href="./index.html" class="focus rounded-sm hover-opacity z-50">
+        <a
+          href="./index.html"
+          class="os-focus os-hover-opacity p-1 rounded-sm z-50"
+        >
           <img
-            src="./images/logo.png"
+            src="./assets/images/logo.png"
             alt="Realstravels Logo"
             class="w-44 md:w-52 lg:w-60"
           />
         </a>
+
         <button
-          id="menu"
-          class="lg:hidden focus rounded-sm dark-text"
+          id="menu-closed"
+          class="os-focus os-dark-theme-dark-txt lg:hidden rounded-sm"
           aria-expanded="false"
-          aria-label="Open Menu"
+          aria-label="Abrir menu"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            id="open-btn"
             class="h-10 w-10"
             fill="none"
             viewBox="0 0 24 24"
@@ -43,10 +51,17 @@
               d="M4 6h16M4 12h16M4 18h16"
             />
           </svg>
+        </button>
+
+        <button
+          id="menu-opened"
+          class="os-focus os-dark-theme-dark-txt lg:hidden rounded-sm hidden"
+          aria-expanded="true"
+          aria-label="Cerrar menu"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            id="close-btn"
-            class="h-10 w-10 hidden"
+            class="h-10 w-10"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -59,23 +74,24 @@
             />
           </svg>
         </button>
-        <div role="menubar" class="menubar-btn hidden lg:flex">
+
+        <div role="menubar" class="os-menubar-links-container hidden lg:flex">
           <a
             href="./index.html"
             role="menuitem"
-            class="py-1 px-6 dark-text focus rounded-md hover-amber-color lg:ml-auto"
+            class="os-dark-theme-dark-txt os-focus os-hover-primary-color py-1 px-6 rounded-md lg:ml-auto"
             >Inicio</a
           >
           <a
-            href="./pages/client-login.html"
+            href=""
             role="menuitem"
-            class="py-1 px-6 dark-text focus rounded-md hover-amber-color"
+            class="os-dark-theme-dark-txt os-focus os-hover-primary-color py-1 px-6 rounded-md"
             >Iniciar Sesion</a
           >
           <a
-            href="./pages/client-signup.html"
+            href=""
             role="menuitem"
-            class="py-1 px-6 dark-text focus rounded-md hover-amber-color border-2 border-neutral-50 bg-neutral-50 shadow-md"
+            class="os-dark-theme-dark-txt os-focus os-hover-primary-color py-1 px-6 rounded-md border-2 border-white bg-white shadow-md"
             >Registrarse</a
           >
         </div>
@@ -83,18 +99,22 @@
     </nav>
 
     <header
-      class="pt-10 lg:pt-16 pb-10 px-5 md:px-3 bg-gradient-to-b from-amber-400 to-amber-600 dark:text-neutral-900"
+      class="os-dark-theme-dark-txt py-10 lg:pt-16 px-5 md:px-3 bg-gradient-to-b from-amber-400 to-amber-600"
     >
-      <h1 class="title">¡Busca ya tu proximo destino de viaje!</h1>
+      <h1 class="os-title">¡Busca ya tu proximo destino de viaje!</h1>
       <form action="#" id="location-form" class="mt-12 lg:mt-16">
         <div
-          class="relative w-full flex flex-row flex-wrap justify-center items-center gap-4 lg:gap-8 form-container"
+          class="relative w-full flex flex-row flex-wrap justify-center items-center gap-4 lg:gap-8 text-lg"
         >
-          <div class="location-form-container">
-            <label for="state" class="w-full mb-2 location-label"
-              >Departamento</label
+          <div
+            class="w-4/5 sm:w-1/3 md:w-1/4 lg:w-1/5 flex flex-col flex-wrap p-2 lg:p-4 bg-amber-600/50 rounded-lg"
+          >
+            <label for="location-form-state" class="mb-2">Departamento</label>
+            <select
+              name="state"
+              id="location-form-state"
+              class="os-location-select os-focus"
             >
-            <select name="state" id="state" class="location-form-select focus">
               <option value="" selected disabled hidden>
                 Seleccione Un Departamento
               </option>
@@ -104,9 +124,15 @@
             </select>
           </div>
 
-          <div class="location-form-container">
-            <label for="city" class="w-full mb-2 location-label">Ciudad</label>
-            <select name="city" class="location-form-select focus">
+          <div
+            class="w-4/5 sm:w-1/3 md:w-1/4 lg:w-1/5 flex flex-col flex-wrap p-2 lg:p-4 bg-amber-600/50 rounded-lg"
+          >
+            <label for="location-form-city" class="mb-2">Ciudad</label>
+            <select
+              name="city"
+              id="location-form-city"
+              class="os-location-select os-focus"
+            >
               <option value="" selected disabled hidden>
                 Seleccione Una Ciudad
               </option>
@@ -116,11 +142,15 @@
             </select>
           </div>
 
-          <div class="location-form-container">
-            <label for="service" class="w-full mb-2 location-label">
-              Servicio
-            </label>
-            <select name="service" class="location-form-select focus">
+          <div
+            class="w-4/5 sm:w-1/3 md:w-1/4 lg:w-1/5 flex flex-col flex-wrap p-2 lg:p-4 bg-amber-600/50 rounded-lg"
+          >
+            <label for="location-form-service" class="mb-2"> Servicio </label>
+            <select
+              name="service"
+              id="location-form-service"
+              class="os-location-select os-focus"
+            >
               <option value="" selected disabled hidden>
                 Seleccione Un Servicio
               </option>
@@ -130,9 +160,15 @@
             </select>
           </div>
 
-          <div class="location-form-container">
-            <label for="type" class="w-full mb-2 location-label">Tipo</label>
-            <select name="type" class="location-form-select focus">
+          <div
+            class="w-4/5 sm:w-1/3 md:w-1/4 lg:w-1/5 flex flex-col flex-wrap p-2 lg:p-4 bg-amber-600/50 rounded-lg"
+          >
+            <label for="location-form-type" class="mb-2">Tipo</label>
+            <select
+              name="type"
+              id="location-form-type"
+              class="os-location-select os-focus"
+            >
               <option value="" selected disabled hidden>
                 Seleccione Un Tipo
               </option>
@@ -141,51 +177,57 @@
               <option value="">Opcion 3</option>
             </select>
           </div>
+
           <div class="w-full flex justify-center items-center mt-4">
             <button
               type="submit"
-              id="selector-btn"
-              class="location-form-btn dark-text focus hover-amber-color"
+              id="submit-location-btn"
+              class="os-dark-theme-dark-txt os-focus os-hover-primary-color w-1/2 md:h-1/3 lg:w-1/4 flex flex-row justify-center items-center py-1 rounded-md border-2 border-white bg-white shadow-md"
             >
-              <span class="material-icons mr-1">search</span> Buscar
+              <span class="material-icons mr-1">search</span>
+              <span>Buscar</span>
             </button>
           </div>
         </div>
       </form>
     </header>
 
-    <main
-      id="main-offers-section"
-      class="py-16 px-6 grid grid-cols-12 justify-center items-center gap-4 lg:gap-8"
-    >
-      <h2 class="subtitle">Mira algunas de nuestras increibles ofertas</h2>
+    <main class="grid grid-cols-12 gap-4 lg:gap-8 py-16 px-6 lg:px-12">
+      <h2 class="os-subtitle-1 col-span-full">
+        Mira algunas de nuestras increibles ofertas
+      </h2>
 
       <div class="col-span-full w-full flex justify-center items-center">
         <div class="h-[2px] w-1/2 md:w-1/3 bg-black dark:bg-white"></div>
       </div>
 
-      <div class="main-offer-div">
-        <div class="main-offer-img-container">
+      <div
+        class="col-span-full sm:col-start-3 sm:col-end-11 md:col-span-6 2xl:col-span-4 h-[520px] sm:h-[420px] lg:h-[320px] w-full bg-neutral-50 dark:bg-neutral-900 rounded shadow-md shadow-black/30 dark:shadow-black/50 flex flex-col lg:flex-row"
+      >
+        <div class="w-full h-1/2 lg:w-2/5 lg:h-full">
           <img
-            src="./images/placeholder.jpg"
+            src="./assets/images/placeholder.jpg"
             alt="img"
-            class="main-offer-img"
+            class="h-full w-full object-cover rounded-t lg:rounded-t-none lg:rounded-l"
           />
         </div>
-        <div class="main-offer-info-container">
-          <div class="row-span-1 w-full h-full">
-            <h3 class="subtitle-2">Explicabo minus doloribus sunt magni</h3>
-            <p class="offer-info-location-par">
-              <span
-                class="material-icons"
-                style="padding-bottom: 3px; font-size: 18px"
-              >
+        <div
+          class="w-full h-1/2 lg:w-3/5 lg:h-full grid grid-rows-[9] justify-center items-center p-4 gap-2"
+        >
+          <div class="row-span-2 w-full h-full">
+            <h3 class="os-subtitle-5 leading-none">
+              Explicabo minus doloribus sunt magni
+            </h3>
+            <p
+              class="flex flex-row items-start text-sm text-neutral-600 dark:text-neutral-300"
+            >
+              <span class="material-icons text-lg leading-none">
                 location_on
               </span>
               Antioquia, Colombia
             </p>
           </div>
-          <div class="main-offer-text-container">
+          <div class="row-start-3 row-span-4 h-full pb-3 pr-3 overflow-auto">
             <p class="text-sm">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
               est. Quae fuga quibusdam quis quas tempora veritatis consectetur
@@ -200,108 +242,41 @@
               distinctio, obcaecati sunt! Facilis?
             </p>
           </div>
-          <div class="main-offer-btn-container">
-            <a href="./pages/producto.html" class="standard-btn focus"
-              >Ver Oferta</a
+          <div class="row-span-2 w-full h-full flex flex-row items-center">
+            <a href="" class="os-button os-focus os-dark-theme-dark-txt">
+              Ver Oferta
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="col-span-full sm:col-start-3 sm:col-end-11 md:col-span-6 2xl:col-span-4 h-[520px] sm:h-[420px] lg:h-[320px] w-full bg-neutral-50 dark:bg-neutral-900 rounded shadow-md shadow-black/30 dark:shadow-black/50 flex flex-col lg:flex-row"
+      >
+        <div class="w-full h-1/2 lg:w-2/5 lg:h-full">
+          <img
+            src="./assets/images/placeholder.jpg"
+            alt="img"
+            class="h-full w-full object-cover rounded-t lg:rounded-t-none lg:rounded-l"
+          />
+        </div>
+        <div
+          class="w-full h-1/2 lg:w-3/5 lg:h-full grid grid-rows-[9] justify-center items-center p-4 gap-2"
+        >
+          <div class="row-span-2 w-full h-full">
+            <h3 class="os-subtitle-5 leading-none">
+              Explicabo minus doloribus sunt magni
+            </h3>
+            <p
+              class="flex flex-row items-start text-sm text-neutral-600 dark:text-neutral-300"
             >
-          </div>
-        </div>
-      </div>
-
-      <div class="main-offer-div">
-        <div class="main-offer-img-container">
-          <img
-            src="./images/placeholder.jpg"
-            alt="img"
-            class="main-offer-img"
-          />
-        </div>
-        <div class="main-offer-info-container">
-          <div class="row-span-1 w-full h-full">
-            <h3 class="subtitle-2">Explicabo minus doloribus sunt magni</h3>
-            <p class="offer-info-location-par">
-              <span
-                class="material-icons"
-                style="padding-bottom: 3px; font-size: 18px"
-              >
+              <span class="material-icons text-lg leading-none">
                 location_on
               </span>
               Antioquia, Colombia
             </p>
           </div>
-          <div class="main-offer-text-container">
-            <p class="text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-              est. Quae fuga quibusdam quis quas tempora veritatis consectetur
-              eveniet, reiciendis nisi dolores, culpa eligendi nostrum ea cumque
-              distinctio asperiores tenetur! Lorem ipsum dolor sit amet
-              consectetur, adipisicing elit. Quis mollitia excepturi aperiam
-              inventore, quod officia nihil facere recusandae magnam et amet
-              tempora magni
-            </p>
-          </div>
-          <div class="main-offer-btn-container">
-            <a href="#" class="standard-btn focus">Ver Oferta</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="main-offer-div">
-        <div class="main-offer-img-container">
-          <img
-            src="./images/placeholder.jpg"
-            alt="img"
-            class="main-offer-img"
-          />
-        </div>
-        <div class="main-offer-info-container">
-          <div class="row-span-1 w-full h-full">
-            <h3 class="subtitle-2">Explicabo minus doloribus sunt magni</h3>
-            <p class="offer-info-location-par">
-              <span
-                class="material-icons"
-                style="padding-bottom: 3px; font-size: 18px"
-              >
-                location_on
-              </span>
-              Antioquia, Colombia
-            </p>
-          </div>
-          <div class="main-offer-text-container">
-            <p class="text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-              est. Quae fuga quibusdam quis quas tempora veritatis consectetur
-              eveniet
-            </p>
-          </div>
-          <div class="main-offer-btn-container">
-            <a href="#" class="standard-btn focus">Ver Oferta</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="main-offer-div">
-        <div class="main-offer-img-container">
-          <img
-            src="./images/placeholder.jpg"
-            alt="img"
-            class="main-offer-img"
-          />
-        </div>
-        <div class="main-offer-info-container">
-          <div class="row-span-1 w-full h-full">
-            <h3 class="subtitle-2">Explicabo minus doloribus sunt magni</h3>
-            <p class="offer-info-location-par">
-              <span
-                class="material-icons"
-                style="padding-bottom: 3px; font-size: 18px"
-              >
-                location_on
-              </span>
-              Antioquia, Colombia
-            </p>
-          </div>
-          <div class="main-offer-text-container">
+          <div class="row-start-3 row-span-4 h-full pb-3 pr-3 overflow-auto">
             <p class="text-sm">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
               est. Quae fuga quibusdam quis quas tempora veritatis consectetur
@@ -311,8 +286,92 @@
               inventore
             </p>
           </div>
-          <div class="main-offer-btn-container">
-            <a href="#" class="standard-btn focus">Ver Oferta</a>
+          <div class="row-span-2 w-full h-full flex flex-row items-center">
+            <a href="" class="os-button os-focus os-dark-theme-dark-txt">
+              Ver Oferta
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="col-span-full sm:col-start-3 sm:col-end-11 md:col-span-6 2xl:col-span-4 h-[520px] sm:h-[420px] lg:h-[320px] w-full bg-neutral-50 dark:bg-neutral-900 rounded shadow-md shadow-black/30 dark:shadow-black/50 flex flex-col lg:flex-row"
+      >
+        <div class="w-full h-1/2 lg:w-2/5 lg:h-full">
+          <img
+            src="./assets/images/placeholder.jpg"
+            alt="img"
+            class="h-full w-full object-cover rounded-t lg:rounded-t-none lg:rounded-l"
+          />
+        </div>
+        <div
+          class="w-full h-1/2 lg:w-3/5 lg:h-full grid grid-rows-[9] justify-center items-center p-4 gap-2"
+        >
+          <div class="row-span-2 w-full h-full">
+            <h3 class="os-subtitle-5 leading-none">
+              Explicabo minus doloribus sunt magni
+            </h3>
+            <p
+              class="flex flex-row items-start text-sm text-neutral-600 dark:text-neutral-300"
+            >
+              <span class="material-icons text-lg leading-none">
+                location_on
+              </span>
+              Antioquia, Colombia
+            </p>
+          </div>
+          <div class="row-start-3 row-span-4 h-full pb-3 pr-3 overflow-auto">
+            <p class="text-sm">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+              est. Quae fuga quibusdam quis quas tempora veritatis consectetur
+              eveniet, reiciendis nisi dolores, culpa eligendi nostrum ea cumque
+              distinctio
+            </p>
+          </div>
+          <div class="row-span-2 w-full h-full flex flex-row items-center">
+            <a href="" class="os-button os-focus os-dark-theme-dark-txt">
+              Ver Oferta
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="col-span-full sm:col-start-3 sm:col-end-11 md:col-span-6 2xl:col-span-4 h-[520px] sm:h-[420px] lg:h-[320px] w-full bg-neutral-50 dark:bg-neutral-900 rounded shadow-md shadow-black/30 dark:shadow-black/50 flex flex-col lg:flex-row"
+      >
+        <div class="w-full h-1/2 lg:w-2/5 lg:h-full">
+          <img
+            src="./assets/images/placeholder.jpg"
+            alt="img"
+            class="h-full w-full object-cover rounded-t lg:rounded-t-none lg:rounded-l"
+          />
+        </div>
+        <div
+          class="w-full h-1/2 lg:w-3/5 lg:h-full grid grid-rows-[9] justify-center items-center p-4 gap-2"
+        >
+          <div class="row-span-2 w-full h-full">
+            <h3 class="os-subtitle-5 leading-none">
+              Explicabo minus doloribus sunt magni
+            </h3>
+            <p
+              class="flex flex-row items-start text-sm text-neutral-600 dark:text-neutral-300"
+            >
+              <span class="material-icons text-lg leading-none">
+                location_on
+              </span>
+              Antioquia, Colombia
+            </p>
+          </div>
+          <div class="row-start-3 row-span-4 h-full pb-3 pr-3 overflow-auto">
+            <p class="text-sm">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+              est.
+            </p>
+          </div>
+          <div class="row-span-2 w-full h-full flex flex-row items-center">
+            <a href="" class="os-button os-focus os-dark-theme-dark-txt">
+              Ver Oferta
+            </a>
           </div>
         </div>
       </div>
@@ -329,10 +388,10 @@
             type="text"
             id="name"
             placeholder="Nombre Completo"
-            class="input focus dark-text peer-input peer"
+            class="input os-focus os-dark-theme-dark-txt peer-input peer"
             required
           />
-          <label for="name" class="label peer-label dark-text">
+          <label for="name" class="label peer-label os-dark-theme-dark-txt">
             Nombre Completo
           </label>
         </div>
@@ -342,10 +401,13 @@
             type="tel"
             id="cellphone"
             placeholder="Numero De Telefono"
-            class="input focus dark-text peer-input peer"
+            class="input os-focus os-dark-theme-dark-txt peer-input peer"
             required
           />
-          <label for="cellphone" class="label peer-label dark-text">
+          <label
+            for="cellphone"
+            class="label peer-label os-dark-theme-dark-txt"
+          >
             Numero De Telefono
           </label>
         </div>
@@ -355,10 +417,10 @@
             type="email"
             id="email"
             placeholder="Correo Electronico"
-            class="input focus dark-text peer-input peer"
+            class="input os-focus os-dark-theme-dark-txt peer-input peer"
             required
           />
-          <label for="email" class="label peer-label dark-text">
+          <label for="email" class="label peer-label os-dark-theme-dark-txt">
             Correo Electronico
           </label>
         </div>
@@ -366,13 +428,13 @@
         <input
           type="submit"
           value="Enviar"
-          class="standard-btn focus mt-4 w-36 text-center ml-auto"
+          class="standard-btn os-focus mt-4 w-36 text-center ml-auto"
         />
       </form>
     </section>
 
     <footer class="footer">
-      <button id="theme-btn" class="theme-btn focus">
+      <button id="theme-btn" class="theme-btn os-focus">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-6 w-6 mx-auto hidden"
@@ -418,6 +480,6 @@
         © 2021 - 2022 RealsTravels
       </p>
     </footer>
-    <script type="module" src="./js/main.js"></script>
+    <script src="./main.js" type="module"></script>
   </body>
 </html>
