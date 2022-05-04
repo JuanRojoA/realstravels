@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es" id="dark-selector">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.svg"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../main.css" />
+    <title>Registro Alojamiento | Realstravels</title>
+  </head>
+  <body class="os-body">
+    <header class="flex justify-center items-center gap-4 mt-6">
+      <a href="../index.html" class="rounded-full os-os-focus">
+        <img
+          src="../assets/images/logo.png"
+          alt=""
+          class="bg-amber-400 px-6 py-6 w-60 md:w-64 lg:w-72 sm:px-8 rounded-full shadow-lg shadow-black/10 dark:shadow-black/30"
+        />
+      </a>
+    </header>
+
+    <main class="mt-4 mb-12 px-4">
+      <h1 class="os-subtitle-3 mt-6 text-center">Registrar Alojamiento</h1>
+
+      <div
+        class="col-span-full w-full flex justify-center items-center mt-2 mb-6"
+      >
+        <div class="h-[2px] w-1/2 md:w-1/3 bg-black dark:bg-white"></div>
+      </div>
+
+      <form
+        action=""
+        class="grid grid-cols-12 items-start justify-center gap-8"
+      >
+        <div class="os-form-section-container">
+          <h2 class="os-form-section-title">General</h2>
+
+          <div class="os-input-container">
+            <label for="nit-alojamiento" class="os-label"> NIT </label>
+            <input
+              type="number"
+              id="nit-alojamiento"
+              class="os-input os-focus os-dark-theme-dark-txt"
+              required
+            />
+          </div>
+
+          <div class="os-input-container">
+            <label for="rtn-alojamiento" class="os-label"> RTN </label>
+            <input
+              type="number"
+              id="rtn-alojamiento"
+              class="os-input os-focus os-dark-theme-dark-txt"
+              required
+            />
+          </div>
+
+          <div class="os-input-container">
+            <label for="nom-alojamiento" class="os-label">
+              Nombre Alojamiento
+            </label>
+            <input
+              type="text"
+              id="nom-alojamiento"
+              class="os-input os-focus os-dark-theme-dark-txt"
+              required
+            />
+          </div>
+
+          <div class="os-input-container">
+            <label for="dir-alojamiento" class="os-label"> Dirección </label>
+            <input
+              type="text"
+              id="dir-alojamiento"
+              class="os-input os-focus os-dark-theme-dark-txt"
+              required
+            />
+          </div>
+
+          <div class="os-input-container">
+            <label for="dep-alojamiento" class="os-label">Departamento</label>
+            <select name="dep-alojamiento" class="os-form-select os-focus">
+              <option value="" selected disabled hidden>
+                Seleccione Un Departamento
+              </option>
+              <option value="">Opcion 1</option>
+              <option value="">Opcion 2</option>
+              <option value="">Opcion 3</option>
+            </select>
+          </div>
+
+          <div class="os-input-container">
+            <label for="cid-alojamiento" class="os-label">Ciudad</label>
+            <select name="cid-alojamiento" class="os-form-select os-focus">
+              <option value="" selected disabled hidden>
+                Seleccione Una Ciudad
+              </option>
+              <option value="">Opcion 1</option>
+              <option value="">Opcion 2</option>
+              <option value="">Opcion 3</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="os-form-section-container">
+          <h2 class="os-form-section-title">Contacto</h2>
+          <div class="os-input-container">
+            <label for="nom-admin" class="os-label">
+              Nombre Administrador
+            </label>
+            <input
+              type="text"
+              id="nom-admin"
+              class="os-input os-focus os-dark-theme-dark-txt"
+              required
+            />
+          </div>
+
+          <div class="os-input-container">
+            <label for="tel-admin" class="os-label">
+              Teléfono Administrador
+            </label>
+            <input
+              type="tel"
+              id="tel-admin"
+              class="os-input os-focus os-dark-theme-dark-txt"
+              required
+            />
+          </div>
+
+          <div class="os-input-container">
+            <label for="tel-alojamiento" class="os-label">
+              Teléfono Alojamiento
+            </label>
+            <input
+              type="tel"
+              id="tel-alojamiento"
+              class="os-input os-focus os-dark-theme-dark-txt"
+              required
+            />
+          </div>
+
+          <div class="os-input-container">
+            <label for="cel-alojamiento" class="os-label">
+              Celular Alojamiento
+            </label>
+            <input
+              type="tel"
+              id="cel-alojamiento"
+              class="os-input os-focus os-dark-theme-dark-txt"
+              required
+            />
+          </div>
+
+          <div class="os-input-container">
+            <label for="email-alojamiento" class="os-label">
+              Correo Electronico Alojamiento
+            </label>
+            <input
+              type="email"
+              id="email-alojamiento"
+              class="os-input os-focus os-dark-theme-dark-txt"
+              required
+            />
+          </div>
+
+          <div class="os-input-container">
+            <label for="pass-alojamiento" class="os-label"> Contraseña </label>
+            <input
+              type="password"
+              id="pass-alojamiento"
+              class="os-input os-focus os-dark-theme-dark-txt"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="os-form-section-container">
+          <h2 class="os-form-section-title">Descripción</h2>
+          <div class="os-input-container">
+            <label for="num-pisos-alojamiento" class="os-label">
+              Nro De Pisos
+            </label>
+            <input
+              type="number"
+              id="num-pisos-alojamiento"
+              class="os-input os-focus os-dark-theme-dark-txt"
+              required
+            />
+          </div>
+
+          <div class="os-input-container">
+            <label for="hab-alojamiento" class="os-label">
+              Habitaciones Por Piso
+            </label>
+            <input
+              type="number"
+              id="hab-alojamiento"
+              class="os-input os-focus os-dark-theme-dark-txt"
+              required
+            />
+          </div>
+
+          <div class="os-input-container">
+            <label for="cupo-alojamiento" class="os-label">
+              Cupo De Personas
+            </label>
+            <input
+              type="number"
+              id="cupo-alojamiento"
+              class="os-input os-focus os-dark-theme-dark-txt"
+              required
+            />
+          </div>
+
+          <div class="os-input-container">
+            <label for="neg-alojamiento" class="os-label"
+              >Tipo De Negocio</label
+            >
+            <select name="neg-alojamiento" class="os-form-select os-focus">
+              <option value="" selected disabled hidden>
+                Seleccione Un Tipo
+              </option>
+              <option value="">Opcion 1</option>
+              <option value="">Opcion 2</option>
+              <option value="">Opcion 3</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="os-form-section-container">
+          <h2 class="os-form-section-title">Descripción</h2>
+          <div class="os-input-container">
+            <label for="desc-alojamiento" class="os-label"> Alojamiento </label>
+            <textarea
+              name="desc-alojamiento"
+              id="desc-alojamiento"
+              class="os-textarea os-focus os-dark-theme-dark-txt"
+              placeholder="Describe por qué los clientes deben preferir tu alojamiento"
+            ></textarea>
+          </div>
+
+          <div class="os-input-container">
+            <label for="desc-cer-alojamiento" class="os-label">
+              Cercanias
+            </label>
+            <textarea
+              name="desc-cer-alojamiento"
+              id="desc-cer-alojamiento"
+              class="os-textarea os-focus os-dark-theme-dark-txt"
+              placeholder="Describe un poco de lo que el cliente puede encontrar en el entorno del alojamiento"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="col-span-full w-full flex justify-center items-center">
+          <div
+            class="h-[1px] w-full bg-black/50 dark:bg-white/30 rounded-full"
+          ></div>
+        </div>
+
+        <div class="col-span-full">
+          <div class="flex flex-row justify-start items-center gap-2">
+            <input
+              type="checkbox"
+              name="terms-agreement-check"
+              id="terms-agreement-check"
+            />
+            <label for="terms-agreement-check"
+              >He leído y acepto los
+              <a href="/" class="os-hover-undeline"
+                >Términos y Condiciones</a
+              ></label
+            >
+          </div>
+          <input
+            type="submit"
+            value="Registrar Alojamiento"
+            class="os-button os-focus mt-4"
+          />
+        </div>
+      </form>
+    </main>
+
+    <footer class="os-footer">
+      <button id="theme-btn" class="os-theme-btn os-os-focus">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 mx-auto hidden"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+          id="dark-theme"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+          />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 mx-auto hidden"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+          id="light-theme"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+          />
+        </svg>
+      </button>
+      <div class="os-footer-container os-footer-container-border">
+        <a href="/" class="os-hover-undeline">Acerca De Nosotros</a>
+        <a href="/" class="os-hover-undeline">Terminos Y Condiciones</a>
+        <a href="/" class="os-hover-undeline">Preguntas Frecuentes</a>
+      </div>
+      <div class="os-footer-container">
+        <p><span class="material-icons"> call </span>304 588 6029</p>
+        <a href="mailto:admon@realstravels.com" class="os-hover-undeline">
+          <span class="material-icons"> email </span>
+          admon@realstravels.com
+        </a>
+        <a href="mailto:reservas@realstravels.com" class="os-hover-undeline">
+          <span class="material-icons"> email </span>
+          reservas@realstravels.com
+        </a>
+        <p><span class="material-icons"> place </span>Medellín, Colombia</p>
+      </div>
+      <p class="font-bold col-span-full text-center mt-4">
+        © 2021 - 2022 RealsTravels
+      </p>
+    </footer>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
