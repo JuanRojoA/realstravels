@@ -114,7 +114,7 @@ div::-webkit-scrollbar {
 
 /* Form styles*/
 .os-basic-form {
-  @apply h-max w-full flex flex-col gap-4 p-4 sm:p-6 bg-neutral-50 dark:bg-neutral-900 rounded shadow-md shadow-black/30 dark:shadow-black/50;
+  @apply h-max w-full flex flex-col gap-4 p-4 sm:p-6 bg-neutral-50 dark:bg-neutral-900 border-2 border-black dark:border-white rounded shadow-md shadow-black/30 dark:shadow-black/50;
 }
 
 .os-input-container {

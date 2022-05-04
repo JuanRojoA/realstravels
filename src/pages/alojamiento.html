@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.svg"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../main.css" />
+    <title>Hotel 1 | Realstravels</title>
+  </head>
+  <body class="os-body">
+    <nav class="os-nav">
+      <div class="mx-auto flex items-center justify-between">
+        <a
+          href="../index.html"
+          class="os-focus os-hover-opacity p-1 rounded-sm z-50"
+        >
+          <img
+            src="../assets/images/logo.png"
+            alt="Realstravels Logo"
+            class="w-44 md:w-52 lg:w-60"
+          />
+        </a>
+
+        <button
+          id="menu-closed"
+          class="os-focus os-dark-theme-dark-txt lg:hidden rounded-sm"
+          aria-expanded="false"
+          aria-label="Abrir menu"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-10 w-10"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+
+        <button
+          id="menu-opened"
+          class="os-focus os-dark-theme-dark-txt lg:hidden rounded-sm hidden"
+          aria-expanded="true"
+          aria-label="Cerrar menu"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-10 w-10"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        <div role="menubar" class="os-menubar-links-container hidden lg:flex">
+          <a
+            href="../index.html"
+            role="menuitem"
+            class="os-dark-theme-dark-txt os-focus os-hover-primary-color py-1 px-6 rounded-md lg:ml-auto"
+            >Inicio</a
+          >
+          <a
+            href="./client-login.html"
+            role="menuitem"
+            class="os-dark-theme-dark-txt os-focus os-hover-primary-color py-1 px-6 rounded-md"
+            >Iniciar Sesion</a
+          >
+          <a
+            href="./client-signup.html"
+            role="menuitem"
+            class="os-dark-theme-dark-txt os-focus os-hover-primary-color py-1 px-6 rounded-md border-2 border-white bg-white shadow-md"
+            >Registrarse</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <main class="p-6 md:px-10 lg:px-16">
+      <h1 class="os-subtitle-2" style="text-align: left">Hotel 1</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ipsa
+        vitae facere adipisci iste dolor dolore, commodi id. Nihil ipsam velit
+        reprehenderit eveniet ab consequatur inventore itaque incidunt
+        repudiandae perspiciatis! Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Esse ratione necessitatibus perferendis earum fuga
+        rerum voluptatum eaque officia, consectetur eligendi illum dicta
+        dolorum! Aperiam veritatis quae, corporis repudiandae at vero!
+      </p>
+      <section
+        class="w-full h-max grid grid-cols-7 justify-center items-start my-10 gap-6"
+      >
+        <div
+          class="w-full max-w-5xl h-[300px] md:h-[400px] col-span-full lg:col-span-5 grid grid-cols-12 grid-rows-3 justify-center items-center overflow-hidden gap-2 self-center"
+        >
+          <div class="col-span-7 md:col-span-9 row-span-3 h-full w-full">
+            <img
+              src="../assets/images/placeholder.jpg"
+              alt=""
+              class="object-cover h-full w-full rounded-md"
+            />
+          </div>
+          <div class="col-span-5 md:col-span-3 row-span-1 h-full w-full">
+            <img
+              src="../assets/images/placeholder.jpg"
+              alt=""
+              class="object-cover h-full w-full rounded-md"
+            />
+          </div>
+          <div class="col-span-5 md:col-span-3 row-span-1 h-full w-full">
+            <img
+              src="../assets/images/placeholder.jpg"
+              alt=""
+              class="object-cover h-full w-full rounded-md"
+            />
+          </div>
+          <div class="col-span-5 md:col-span-3 row-span-1 h-full w-full">
+            <img
+              src="../assets/images/placeholder.jpg"
+              alt=""
+              class="object-cover h-full w-full rounded-md"
+            />
+          </div>
+        </div>
+        <div class="col-span-full lg:col-span-2">
+          <h2 class="os-subtitle-3">Nuestros servicios</h2>
+          <ul class="p-2 list-disc list-inside">
+            <li>Garaje</li>
+            <li>Piscina</li>
+            <li>Yacuzi</li>
+            <li>Teatro al aire libre</li>
+            <li>Parque de diversiones</li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        class="w-full h-max flex flex-col-reverse lg:flex-row justify-center items-start my-10 gap-6"
+      >
+        <div class="w-full lg:w-1/2">
+          <h2 class="os-subtitle-3">Nuestras instalaciones</h2>
+          <ul class="p-2 list-disc list-inside">
+            <li>Garaje</li>
+            <li>Piscina</li>
+            <li>Yacuzi</li>
+            <li>Teatro al aire libre</li>
+            <li>Parque de diversiones</li>
+          </ul>
+        </div>
+        <div
+          class="w-full lg:w-1/2 max-w-5xl h-[300px] md:h-[400px] grid grid-cols-2 grid-rows-2 justify-center items-center overflow-hidden gap-2 self-center"
+        >
+          <div class="col-span-1 row-span-1 h-full w-full">
+            <img
+              src="../assets/images/placeholder.jpg"
+              alt=""
+              class="object-cover h-full w-full rounded-md"
+            />
+          </div>
+          <div class="col-span-1 row-span-1 h-full w-full">
+            <img
+              src="../assets/images/placeholder.jpg"
+              alt=""
+              class="object-cover h-full w-full rounded-md"
+            />
+          </div>
+          <div class="col-span-1 row-span-1 h-full w-full">
+            <img
+              src="../assets/images/placeholder.jpg"
+              alt=""
+              class="object-cover h-full w-full rounded-md"
+            />
+          </div>
+          <div class="col-span-1 row-span-1 h-full w-full">
+            <img
+              src="../assets/images/placeholder.jpg"
+              alt=""
+              class="object-cover h-full w-full rounded-md"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="w-full h-max flex flex-col lg:flex-row justify-center items-start my-10 gap-6"
+      >
+        <div
+          class="w-full lg:w-1/2 max-w-5xl h-[300px] md:h-[400px] grid grid-cols-2 grid-rows-2 justify-center items-center overflow-hidden gap-2 self-center"
+        >
+          <div class="col-span-1 row-span-1 h-full w-full">
+            <img
+              src="../assets/images/placeholder.jpg"
+              alt=""
+              class="object-cover h-full w-full rounded-md"
+            />
+          </div>
+          <div class="col-span-1 row-span-1 h-full w-full">
+            <img
+              src="../assets/images/placeholder.jpg"
+              alt=""
+              class="object-cover h-full w-full rounded-md"
+            />
+          </div>
+          <div class="col-span-1 row-span-1 h-full w-full">
+            <img
+              src="../assets/images/placeholder.jpg"
+              alt=""
+              class="object-cover h-full w-full rounded-md"
+            />
+          </div>
+          <div class="col-span-1 row-span-1 h-full w-full">
+            <img
+              src="../assets/images/placeholder.jpg"
+              alt=""
+              class="object-cover h-full w-full rounded-md"
+            />
+          </div>
+        </div>
+        <div class="w-full lg:w-1/2">
+          <h2 class="os-subtitle-3">Nuestros accesos</h2>
+          <ul class="p-2 list-disc list-inside">
+            <li>Garaje</li>
+            <li>Piscina</li>
+            <li>Yacuzi</li>
+            <li>Teatro al aire libre</li>
+            <li>Parque de diversiones</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <section class="p-6 md:px-10 lg:px-16 mb-16">
+      <h3 class="os-subtitle-2 text-center mb-4">Reservar habitaciones</h3>
+      <div class="col-span-full w-full flex justify-center items-center mb-8">
+        <div class="h-[2px] w-1/2 md:w-1/3 bg-black dark:bg-white"></div>
+      </div>
+      <div class="flex flex-row flex-wrap justify-center items-start gap-4">
+        <div
+          class="min-w-[250px] w-full max-w-xs bg-white dark:bg-neutral-900 shadow-md p-4 rounded"
+        >
+          <h4 class="os-subtitle-4">Suite</h4>
+          <p>$120.000</p>
+          <div class="w-full h-48">
+            <img
+              src="../assets/images/placeholder.jpg"
+              alt=""
+              class="object-cover h-full w-full"
+            />
+          </div>
+          <div class="os-input-container">
+            <label class="os-label"> Cantidad: </label>
+            <input
+              type="number"
+              placeholder="Digite número de habitaciones"
+              class="os-input os-focus os-dark-theme-dark-txt placeholder:text-black"
+              required
+            />
+          </div>
+        </div>
+
+        <div
+          class="w-full max-w-xs bg-white dark:bg-neutral-900 shadow-md p-4 rounded"
+        >
+          <h4 class="os-subtitle-4">Suite</h4>
+          <p>$120.000</p>
+          <div class="w-full h-48">
+            <img
+              src="../assets/images/placeholder.jpg"
+              alt=""
+              class="object-cover h-full w-full"
+            />
+          </div>
+          <div class="os-input-container">
+            <label class="os-label"> Cantidad: </label>
+            <input
+              type="number"
+              placeholder="Digite número de habitaciones"
+              class="os-input os-focus os-dark-theme-dark-txt placeholder:text-black"
+              required
+            />
+          </div>
+        </div>
+
+        <div
+          class="w-full max-w-xs bg-white dark:bg-neutral-900 shadow-md p-4 rounded"
+        >
+          <h4 class="os-subtitle-4">Suite</h4>
+          <p>$120.000</p>
+          <div class="w-full h-48">
+            <img
+              src="../assets/images/placeholder.jpg"
+              alt=""
+              class="object-cover h-full w-full"
+            />
+          </div>
+          <div class="os-input-container">
+            <label class="os-label"> Cantidad: </label>
+            <input
+              type="number"
+              placeholder="Digite número de habitaciones"
+              class="os-input os-focus os-dark-theme-dark-txt placeholder:text-black"
+              required
+            />
+          </div>
+        </div>
+
+        <div
+          class="w-full max-w-xs bg-white dark:bg-neutral-900 shadow-md p-4 rounded"
+        >
+          <h4 class="os-subtitle-4">Suite</h4>
+          <p>$120.000</p>
+          <div class="w-full h-48">
+            <img
+              src="../assets/images/placeholder.jpg"
+              alt=""
+              class="object-cover h-full w-full"
+            />
+          </div>
+          <div class="os-input-container">
+            <label class="os-label"> Cantidad: </label>
+            <input
+              type="number"
+              placeholder="Digite número de habitaciones"
+              class="os-input os-focus os-dark-theme-dark-txt placeholder:text-black"
+              required
+            />
+          </div>
+        </div>
+
+        <div
+          class="w-full max-w-xs bg-white dark:bg-neutral-900 shadow-md p-4 rounded"
+        >
+          <h4 class="os-subtitle-4">Suite</h4>
+          <p>$120.000</p>
+          <div class="w-full h-48">
+            <img
+              src="../assets/images/placeholder.jpg"
+              alt=""
+              class="object-cover h-full w-full"
+            />
+          </div>
+          <div class="os-input-container">
+            <label class="os-label"> Cantidad: </label>
+            <input
+              type="number"
+              placeholder="Digite número de habitaciones"
+              class="os-input os-focus os-dark-theme-dark-txt placeholder:text-black"
+              required
+            />
+          </div>
+        </div>
+
+        <div
+          class="w-full max-w-xs bg-white dark:bg-neutral-900 shadow-md p-4 rounded"
+        >
+          <h4 class="os-subtitle-4">Suite</h4>
+          <p>$120.000</p>
+          <div class="w-full h-48">
+            <img
+              src="../assets/images/placeholder.jpg"
+              alt=""
+              class="object-cover h-full w-full"
+            />
+          </div>
+          <div class="os-input-container">
+            <label class="os-label"> Cantidad: </label>
+            <input
+              type="number"
+              placeholder="Digite número de habitaciones"
+              class="os-input os-focus os-dark-theme-dark-txt placeholder:text-black"
+              required
+            />
+          </div>
+        </div>
+
+        <div
+          class="w-full max-w-xs bg-white dark:bg-neutral-900 shadow-md p-4 rounded"
+        >
+          <h4 class="os-subtitle-4">Suite</h4>
+          <p>$120.000</p>
+          <div class="w-full h-48">
+            <img
+              src="../assets/images/placeholder.jpg"
+              alt=""
+              class="object-cover h-full w-full"
+            />
+          </div>
+          <div class="os-input-container">
+            <label class="os-label"> Cantidad: </label>
+            <input
+              type="number"
+              placeholder="Digite número de habitaciones"
+              class="os-input os-focus os-dark-theme-dark-txt placeholder:text-black"
+              required
+            />
+          </div>
+        </div>
+        <a
+          href="./checkout.html"
+          class="w-full flex justify-center items-center mt-8"
+        >
+          <button
+            type="submit"
+            id="submit-location-btn"
+            class="os-dark-theme-dark-txt os-focus os-hover-primary-color w-1/2 md:h-1/3 lg:w-1/4 py-1 rounded-md border-2 border-white bg-white shadow-md"
+          >
+            <span>Reservar</span>
+          </button>
+        </a>
+      </div>
+    </section>
+
+    <footer class="os-footer">
+      <button id="theme-btn" class="os-theme-btn os-focus">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 mx-auto hidden"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+          id="dark-theme"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+          />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 mx-auto hidden"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+          id="light-theme"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+          />
+        </svg>
+      </button>
+      <div class="os-footer-container os-footer-container-border">
+        <a href="/" class="os-hover-undeline">Acerca De Nosotros</a>
+        <a href="/" class="os-hover-undeline">Terminos Y Condiciones</a>
+        <a href="/" class="os-hover-undeline">Preguntas Frecuentes</a>
+      </div>
+      <div class="os-footer-container">
+        <p><span class="material-icons"> call </span>304 588 6029</p>
+        <a href="mailto:admon@realstravels.com" class="os-hover-undeline">
+          <span class="material-icons"> email </span>
+          admon@realstravels.com
+        </a>
+        <a href="mailto:reservas@realstravels.com" class="os-hover-undeline">
+          <span class="material-icons"> email </span>
+          reservas@realstravels.com
+        </a>
+        <p><span class="material-icons"> place </span>Medellín, Colombia</p>
+      </div>
+      <p class="font-bold col-span-full text-center mt-4">
+        © 2021 - 2022 RealsTravels
+      </p>
+    </footer>
+    <script type="module" src="../main.js"></script>
+    <script type="module" src="../js/nav.js"></script>
+  </body>
+</html>
