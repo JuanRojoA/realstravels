@@ -41,7 +41,7 @@ div::-webkit-scrollbar {
 
 /* Hover state */
 .os-hover-opacity {
-  @apply hover:opacity-80 transition-opacity;
+  @apply hover:opacity-50 transition-opacity;
 }
 
 .os-hover-primary-color {
