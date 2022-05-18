@@ -186,140 +186,40 @@
 
     <main class="os-main">
       <div class="w-full p-4 rounded-md bg-neutral-50 dark:bg-neutral-900">
-        <h1 class="os-subtitle-2 text-center mb-4">Politicas</h1>
+        <h1 class="os-subtitle-2 text-center mb-4">Cambiar Contraseña</h1>
 
-        <div class="h-max">
-          <form action="#" class="flex flex-wrap gap-4">
-            <input
-              type="text"
-              placeholder="Buscar una politica"
-              class="w-full sm:w-1/2 md:w-3/4 rounded-md os-focus os-dark-theme-dark-txt h-10"
-            />
+        <div class="h-max w-full flex justify-center items-center">
+          <form action="#" class="flex flex-col gap-4 w-3/4 lg:w-1/2">
+            <div class="os-input-container">
+              <label for="con-change-password" class="os-label">
+                Nueva contraseña
+              </label>
+              <input
+                type="password"
+                id="change-password"
+                class="os-input os-focus os-dark-theme-dark-txt"
+                required
+              />
+            </div>
+
+            <div class="os-input-container">
+              <label for="con-change-password" class="os-label">
+                Confirmar contraseña
+              </label>
+              <input
+                type="password"
+                id="con-change-password"
+                class="os-input os-focus os-dark-theme-dark-txt"
+                required
+              />
+            </div>
+
             <input
               type="submit"
-              value="Buscar"
-              class="os-button h-10 w-full sm:w-max"
+              value="Cambiar contraseña"
+              class="os-button os-focus mt-4 ml-auto"
             />
           </form>
-        </div>
-
-        <div class="my-4 flex gap-4">
-          <button class="os-button os-button-bg-green">Nueva politica</button>
-          <button class="os-button os-button-bg-blue">Nuevo aspecto</button>
-        </div>
-
-        <div class="w-full overflow-auto">
-          <table
-            class="w-full table-auto border-collapse border-2 border-black/30 dark:border-white/30"
-          >
-            <thead>
-              <tr class="bg-amber-400 os-dark-theme-dark-txt">
-                <th class="os-table-border">Aspecto</th>
-                <th class="os-table-border">Parametro 1</th>
-                <th class="os-table-border">Parametro 2</th>
-                <th class="os-table-border">Variable</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="os-table-border">Aspecto</td>
-                <td class="os-table-border">2</td>
-                <td class="os-table-border">3</td>
-                <td class="os-table-border">Var</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="w-full flex flex-row items-center mt-4 flex-wrap gap-4">
-          <div class="flex flex-row gap-2 items-center sm:items-end">
-            <select
-              name=""
-              id=""
-              class="os-dark-theme-dark-txt os-focus h-8 rounded-md text-sm py-0"
-            >
-              <option value="5">5</option>
-              <option value="10">10</option>
-              <option value="15">15</option>
-              <option value="20">20</option>
-              <option value="30">30</option>
-              <option value="40">40</option>
-              <option value="50">50</option>
-            </select>
-            <p>de un total de 2 registros / Pag. 1 de 1</p>
-          </div>
-
-          <div class="flex flex-row h-max ml-auto">
-            <div class="os-pagination-elem os-focus">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M11 19l-7-7 7-7m8 14l-7-7 7-7"
-                />
-              </svg>
-            </div>
-            <div class="os-pagination-elem os-focus">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-            </div>
-            <div
-              class="p-1 bg-neutral-50 dark:bg-neutral-900 border border-black/30 dark:border-white/50"
-            >
-              1
-            </div>
-            <div class="os-pagination-elem os-focus">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </div>
-            <div class="os-pagination-elem os-focus">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M13 5l7 7-7 7M5 5l7 7-7 7"
-                />
-              </svg>
-            </div>
-          </div>
         </div>
       </div>
     </main>
