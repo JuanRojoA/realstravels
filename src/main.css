@@ -10,10 +10,12 @@ input[type="submit"] {
 /* width */
 ::-webkit-scrollbar {
   width: 8px;
+  height: 8px;
 }
 
 div::-webkit-scrollbar {
   width: 4px;
+  height: 4px;
 }
 
 /* Track */
@@ -108,12 +110,12 @@ div::-webkit-scrollbar {
 /* Component styling */
 /* Body */
 .os-body {
-  @apply relative bg-neutral-200 dark:bg-neutral-700 text-black dark:text-white text-base font-sans font-normal scroll-smooth;
+  @apply relative w-full h-full bg-neutral-200 dark:bg-neutral-700 text-black dark:text-white text-base font-sans font-normal scroll-smooth;
 }
 
 /* Admin tools main */
 .os-main {
-  @apply h-max w-full sm:w-[calc(100%_-_270px)] sm:fixed left-[270px] top-0 p-8;
+  @apply h-max w-full sm:w-[calc(100%_-_270px)] sm:fixed left-[270px] top-0 p-4 sm:p-8;
 }
 
 /* Nav */

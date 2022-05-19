@@ -19,31 +19,6 @@
     <title>Configuracion De Cuenta | Realstravels</title>
   </head>
   <body class="os-body">
-    <!-- Modals -->
-    <!-- Acierto -->
-    <div class="absolute w-screen h-screen inset-0 bg-black/40 z-40 hidden">
-      <div
-        class="sticky left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-neutral-100 dark:bg-neutral-900 shadow-md dark:shadow-white/5 h-max w-4/5 lg:w-2/5 rounded-2xl p-8 z-50"
-      >
-        <h3 class="os-subtitle-2 text-center mb-4">Definir politica</h3>
-        <div class="os-input-container">
-          <select name="" id="" class="os-form-select h-12 os-focus">
-            <option value="">Opcion 1</option>
-            <option value="">Opcion 1</option>
-            <option value="">Opcion 1</option>
-            <option value="">Opcion 1</option>
-            <option value="">Opcion 1</option>
-            <option value="">Opcion 1</option>
-          </select>
-        </div>
-        <div class="w-full flex flex-row flex-wrap gap-4 mr-auto mt-4">
-          <button class="os-button os-button-bg-green ml-auto">Definir</button>
-          <button class="os-button os-button-bg-blue">Cerrar</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Normal Page -->
     <aside
       class="max-h-72 sm:min-h-screen sm:fixed left-0 top-0 overflow-y-auto sm:max-w-[270px] w-full bg-neutral-400 dark:bg-neutral-800 p-4 flex justify-start gap-4 flex-col"
     >
@@ -223,13 +198,13 @@
 
     <main class="os-main">
       <div class="w-full p-4 rounded-md bg-neutral-50 dark:bg-neutral-900">
-        <h1 class="os-subtitle-2 text-center mb-4">Politicas</h1>
+        <h1 class="os-subtitle-2 text-center mb-4">Servicios</h1>
 
         <div class="h-max">
           <form action="#" class="flex flex-wrap gap-4">
             <input
               type="text"
-              placeholder="Buscar una politica"
+              placeholder="Buscar un servicio"
               class="w-full sm:w-1/2 md:w-3/4 rounded-md os-focus os-dark-theme-dark-txt h-10"
             />
             <input
@@ -241,8 +216,9 @@
         </div>
 
         <div class="my-4 flex gap-4">
-          <button class="os-button os-button-bg-green">Nueva politica</button>
-          <button class="os-button os-button-bg-blue">Nuevo aspecto</button>
+          <button class="os-button os-button-bg-green">Nuevo servicio</button>
+          <button class="os-button os-button-bg-green">Subir fotos</button>
+          <button class="os-button os-button-bg-blue">Asignar servicio</button>
         </div>
 
         <div class="w-full overflow-auto">
@@ -251,18 +227,12 @@
           >
             <thead>
               <tr class="bg-amber-400 os-dark-theme-dark-txt">
-                <th class="os-table-border">Aspecto</th>
-                <th class="os-table-border">Parametro 1</th>
-                <th class="os-table-border">Parametro 2</th>
-                <th class="os-table-border">Variable</th>
+                <th class="os-table-border">Descripción</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td class="os-table-border">Aspecto</td>
-                <td class="os-table-border">2</td>
-                <td class="os-table-border">3</td>
-                <td class="os-table-border">Var</td>
               </tr>
             </tbody>
           </table>
