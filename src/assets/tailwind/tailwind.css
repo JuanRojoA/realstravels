@@ -639,6 +639,10 @@ select {
   --tw-backdrop-sepia:  ;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -677,6 +681,10 @@ select {
 
 .top-1\/2 {
   top: 50%;
+}
+
+.top-28 {
+  top: 7rem;
 }
 
 .z-50 {
@@ -725,6 +733,10 @@ select {
 
 .row-start-3 {
   grid-row-start: 3;
+}
+
+.-m-16 {
+  margin: -4rem;
 }
 
 .mx-auto {
@@ -807,16 +819,16 @@ select {
   margin-left: 0.25rem;
 }
 
-.-mt-4 {
-  margin-top: -1rem;
-}
-
-.-mr-4 {
-  margin-right: -1rem;
-}
-
 .mr-auto {
   margin-right: auto;
+}
+
+.-mt-16 {
+  margin-top: -4rem;
+}
+
+.-mt-20 {
+  margin-top: -5rem;
 }
 
 .block {
@@ -897,16 +909,20 @@ select {
   height: 100vh;
 }
 
-.h-32 {
-  height: 8rem;
-}
-
 .h-12 {
   height: 3rem;
 }
 
+.h-32 {
+  height: 8rem;
+}
+
 .max-h-72 {
   max-height: 18rem;
+}
+
+.max-h-96 {
+  max-height: 24rem;
 }
 
 .w-44 {
@@ -959,14 +975,14 @@ select {
   width: 100vw;
 }
 
-.w-8 {
-  width: 2rem;
-}
-
 .w-max {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+}
+
+.w-8 {
+  width: 2rem;
 }
 
 .w-32 {
@@ -2378,6 +2394,10 @@ div::-webkit-scrollbar {
     gap: 1rem;
   }
 
+  .sm\:p-8 {
+    padding: 2rem;
+  }
+
   .sm\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -2414,6 +2434,10 @@ div::-webkit-scrollbar {
     height: 400px;
   }
 
+  .md\:h-2\/3 {
+    height: 66.666667%;
+  }
+
   .md\:w-52 {
     width: 13rem;
   }
@@ -2440,6 +2464,10 @@ div::-webkit-scrollbar {
 
   .md\:w-3\/4 {
     width: 75%;
+  }
+
+  .md\:w-2\/3 {
+    width: 66.666667%;
   }
 
   .md\:max-w-sm {
@@ -2500,6 +2528,10 @@ div::-webkit-scrollbar {
 
   .lg\:h-full {
     height: 100%;
+  }
+
+  .lg\:h-1\/2 {
+    height: 50%;
   }
 
   .lg\:w-60 {
