@@ -1,109 +1,108 @@
 <!DOCTYPE html>
-<html lang="es" id="dark-selector">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../../assets/images/favicon.svg"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../main.css" />
-    <title>Inicio Sesión Cliente | Realstravels</title>
+    <link rel="stylesheet" href="../../main.css" />
+    <title>Inicio Sesión Empresa | Realstravels</title>
   </head>
-
   <body class="os-body">
     <header class="flex justify-center items-center gap-4 mt-6">
-      <a href="../index.html" class="rounded-full os-focus">
+      <a href="../../index.html" class="rounded-full os-focus">
         <img
-          src="../assets/images/logo.png"
-          alt=""
-          class="bg-amber-400 px-6 py-6 w-60 md:w-64 lg:w-72 sm:px-8 rounded-full shadow-lg shadow-black/10 dark:shadow-black/30"
+          src="../../assets/images/logo.png"
+          alt="logo"
+          class="os-big-logo"
         />
       </a>
     </header>
 
-    <main class="os-auth-section">
+    <section
+      class="grid grid-cols-6 justify-center items-center gap-4 lg:gap-8 py-10 px-6 h-max"
+    >
       <div class="os-form-img-container">
-        <img src="../assets/images/lamp.png" alt="" class="os-form-img" />
+        <img src="../../assets/images/lamp.png" alt="" class="os-form-img" />
       </div>
+
       <form action="" class="os-basic-form os-client-auth-form">
-        <h2 id="contact" class="os-subtitle-2 mb-3">Registro</h2>
-        <div class="os-input-container">
-          <label for="client-signup-name" class="os-label">
-            Nombre de Usuario
-          </label>
-          <input
-            type="text"
-            id="client-signup-name"
-            class="os-input os-focus os-dark-theme-dark-txt"
-            required
-          />
+        <h2 id="contact" class="os-subtitle-2 mb-3">
+          Iniciar Sesión | Empresa
+        </h2>
+
+        <div class="os-input-container flex flex-row justify-start gap-4">
+          <div class="flex flex-row justify-start items-center gap-2">
+            <input
+              type="radio"
+              name="business"
+              id="business-login-place-radio"
+            />
+            <label for="business-login-place-radio">Alojamiento</label>
+          </div>
+
+          <div class="flex flex-row justify-start items-center gap-2">
+            <input
+              type="radio"
+              name="business"
+              id="business-login-agency-input"
+            />
+            <label for="business-login-agency-input">Agencia</label>
+          </div>
         </div>
+
         <div class="os-input-container">
-          <label for="client-signup-email" class="os-label">
+          <label for="business-log-email" class="os-label">
             Correo Electronico
           </label>
           <input
             type="email"
-            id="client-signup-email"
+            id="business-log-email"
             class="os-input os-focus os-dark-theme-dark-txt"
             required
           />
         </div>
-        <div class="os-input-container">
-          <label for="client-signup-phone" class="os-label">
-            Número Telefonico
-          </label>
-          <input
-            type="tel"
-            id="client-signup-phone"
-            class="os-input os-focus os-dark-theme-dark-txt"
-            required
-          />
-        </div>
-        <div class="os-input-container">
-          <label for="client-signup-password" class="os-label">
+
+        <div class="input-container">
+          <label for="business-log-password" class="os-label">
             Contraseña
           </label>
           <input
             type="password"
-            id="client-signup-password"
-            class="os-input os-focus os-dark-theme-dark-txt"
-            required
-          />
-          <p class="text-xs mt-2 ml-1">
-            Al menos 4 caracteres, 1 número y 1 minúscula
-          </p>
-        </div>
-        <div class="os-input-container">
-          <label for="client-signup-password-con" class="os-label">
-            Confirmar Contraseña
-          </label>
-          <input
-            type="password"
-            id="client-signup-password-con"
+            id="business-log-password"
             class="os-input os-focus os-dark-theme-dark-txt"
             required
           />
         </div>
+
         <input
           type="submit"
-          value="Registrarse"
-          class="os-button os-focus mt-4 ml-auto"
+          value="Iniciar Sesión"
+          class="os-button focus mt-4 ml-auto"
         />
+
         <div class="os-form-links-container">
-          <a href="./client-login.html" class="os-hover-undeline"
-            >Iniciar Sesión</a
+          <a href="../recuperar-contrasena.html" class="os-hover-undeline"
+            >¿Olvidó Su Contraseña?</a
           >
-          <a href="./business-singup.html" class="os-hover-undeline">
-            Registrarse Como Empresa
+          <a href="../signup/business-singup.html" class="os-hover-undeline"
+            >Registrarse</a
+          >
+          <a href="./client-login.html" class="os-hover-undeline">
+            Iniciar Sesión Como Cliente
           </a>
         </div>
       </form>
-    </main>
+    </section>
 
     <footer class="os-footer">
       <button id="theme-btn" class="os-theme-btn os-focus">
@@ -159,6 +158,7 @@
         © 2021 - 2022 RealsTravels
       </p>
     </footer>
-    <script type="module" src="../main.js"></script>
+
+    <script type="module" src="../../main.js"></script>
   </body>
 </html>

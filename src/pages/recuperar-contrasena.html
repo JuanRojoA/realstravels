@@ -7,97 +7,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../main.css" />
     <title>Recuperar Contraseña | Realstravels</title>
   </head>
   <body class="os-body">
-    <!-- Modals -->
-    <!-- Acierto -->
-    <div
-      class="absolute inset-0 bg-neutral-900/50 w-full h-full z-30 modal sucess-modal hidden"
-    >
-      <div
-        class="sticky left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-neutral-100 dark:bg-neutral-900 shadow-md dark:shadow-white/5 h-max w-max max-w-[290px] md:max-w-sm rounded-2xl p-8 z-40"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-8 w-8 ml-auto cursor-pointer hover-opacity os-focus close-modal"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          stroke-width="2"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M6 18L18 6M6 6l12 12"
-          />
-        </svg>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-32 w-32 mx-auto text-green-600"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          stroke-width="2"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-        <p class="text-center">
-          Mensaje de activación enviado. Por favor, revise su buzón de correo.
-        </p>
-      </div>
-    </div>
-
-    <!-- Error -->
-    <div
-      class="absolute inset-0 bg-neutral-900/50 w-full h-full z-30 modal error-modal hidden"
-    >
-      <div
-        class="sticky left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-neutral-100 dark:bg-neutral-900 shadow-md dark:shadow-white/5 h-max w-max max-w-[290px] md:max-w-sm rounded-2xl p-8 z-40"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-8 w-8 ml-auto cursor-pointer hover-opacity os-focus close-modal"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          stroke-width="2"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M6 18L18 6M6 6l12 12"
-          />
-        </svg>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-32 w-32 mx-auto text-red-600"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          stroke-width="2"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-        <p class="text-center">
-          La dirección de correo suministrada no está registrada en la
-          plataforma.
-        </p>
-      </div>
-    </div>
-
     <nav class="os-nav">
       <div class="mx-auto flex items-center justify-between">
         <a
@@ -160,20 +76,23 @@
             href="../index.html"
             role="menuitem"
             class="os-dark-theme-dark-txt os-focus os-hover-primary-color py-1 px-6 rounded-md lg:ml-auto"
-            >Inicio</a
           >
+            Inicio
+          </a>
           <a
-            href="./client-login.html"
+            href="./login/client-login.html"
             role="menuitem"
             class="os-dark-theme-dark-txt os-focus os-hover-primary-color py-1 px-6 rounded-md"
-            >Iniciar Sesion</a
           >
+            Iniciar Sesion
+          </a>
           <a
-            href="./client-signup.html"
+            href="./signup/client-signup.html"
             role="menuitem"
             class="os-dark-theme-dark-txt os-focus os-hover-primary-color py-1 px-6 rounded-md border-2 border-white bg-white shadow-md"
-            >Registrarse</a
           >
+            Registrarse
+          </a>
         </div>
       </div>
     </nav>
@@ -283,6 +202,7 @@
         © 2021 - 2022 RealsTravels
       </p>
     </footer>
+
     <script type="module" src="../main.js"></script>
     <script type="module" src="../js/nav.js"></script>
   </body>
