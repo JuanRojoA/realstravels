@@ -16,6 +16,8 @@ if (
   localStorage.theme = "light";
 }
 
+setText(localStorage.theme);
+
 themeBtn.addEventListener("click", () => {
   document.documentElement.classList.toggle("dark");
   lightIcon.classList.toggle("hidden");
@@ -25,4 +27,17 @@ themeBtn.addEventListener("click", () => {
   } else {
     localStorage.theme = "light";
   }
+  setText(localStorage.theme);
 });
+
+function setText(theme) {
+  const parentTheme = themeBtn.parentElement.nodeName;
+  const text = document.querySelector("#theme-text");
+  if (parentTheme === "UL") {
+    if (theme === "dark") {
+      text.textContent = "Tema oscuro";
+    } else if (theme === "light") {
+      text.textContent = "Tema claro";
+    }
+  }
+}

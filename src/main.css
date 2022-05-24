@@ -114,8 +114,8 @@ div::-webkit-scrollbar {
 }
 
 /* Admin tools main */
-.os-main {
-  @apply h-max w-full sm:w-[calc(100%_-_270px)] sm:fixed left-[270px] top-0 p-4 sm:p-8;
+.os-config-main {
+  @apply h-max w-full sm:w-[calc(100%_-_270px)] sm:absolute left-[270px] top-0 p-4 sm:p-8 overflow-y-scroll;
 }
 
 /* Nav */
@@ -123,8 +123,20 @@ div::-webkit-scrollbar {
   @apply sticky top-0 left-0 mx-auto py-2 px-4 bg-amber-400 z-40;
 }
 
+.os-nav-config {
+  @apply h-14 w-full bg-amber-400 z-50 flex sm:hidden fixed left-0 top-0 justify-end items-center px-4;
+}
+
 .os-menubar-links-container {
   @apply absolute right-0 left-0 top-14 flex-col gap-4 items-center p-8 text-center shadow-xl lg:flex-row lg:static lg:shadow-none lg:justify-center lg:p-2 lg:w-full overflow-auto bg-amber-400 z-50;
+}
+
+.os-menubar-links-container-config {
+  @apply h-[calc(100%_-_56px)] sm:h-screen fixed left-0 top-14 sm:top-0 overflow-y-auto sm:max-w-[270px] w-full bg-neutral-400 dark:bg-neutral-800 p-4 justify-start gap-4 flex-col z-50;
+}
+
+.os-menubar-link-config {
+  @apply flex rounded-sm p-1;
 }
 
 /* Header */
@@ -133,6 +145,11 @@ div::-webkit-scrollbar {
 }
 
 /* Form styles*/
+
+.os-multi-form-container {
+  @apply grid grid-cols-12 items-start justify-center gap-4;
+}
+
 .os-basic-form {
   @apply h-max w-full flex flex-col gap-4 p-4 sm:p-6 bg-neutral-50 dark:bg-neutral-900 border-2 border-black dark:border-white rounded shadow-md shadow-black/30 dark:shadow-black/50;
 }
