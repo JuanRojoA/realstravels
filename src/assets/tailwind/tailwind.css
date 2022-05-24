@@ -817,10 +817,6 @@ select {
   margin-top: 3.5rem;
 }
 
-.mr-auto {
-  margin-right: auto;
-}
-
 .block {
   display: block;
 }
@@ -959,10 +955,6 @@ select {
 
 .w-3\/4 {
   width: 75%;
-}
-
-.w-screen {
-  width: 100vw;
 }
 
 .w-max {
