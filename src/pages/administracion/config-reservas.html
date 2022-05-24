@@ -333,7 +333,156 @@
 
     <main class="os-config-main">
       <div class="w-full p-4 rounded-md bg-neutral-50 dark:bg-neutral-900">
-        <h1 class="os-subtitle-2 text-center mb-4">Reservas</h1>
+        <h1 class="os-subtitle-2 text-center mb-4">Reservaciones</h1>
+
+        <div class="h-max">
+          <form action="#" class="flex flex-wrap gap-4">
+            <input
+              type="text"
+              placeholder="Buscar una habitación"
+              class="w-full sm:w-1/2 md:w-3/4 rounded-md os-focus os-dark-theme-dark-txt h-10"
+            />
+            <input
+              type="submit"
+              value="Buscar"
+              class="os-button h-10 w-full sm:w-max"
+            />
+          </form>
+        </div>
+
+        <div class="w-full overflow-auto mt-6">
+          <table
+            class="w-full table-auto border-collapse border-2 border-black/30 dark:border-white/30"
+          >
+            <thead>
+              <tr class="bg-amber-400 os-dark-theme-dark-txt">
+                <th class="os-table-border"></th>
+                <th class="os-table-border">Cliente</th>
+                <th class="os-table-border">Reserva</th>
+                <th class="os-table-border">Registro</th>
+                <th class="os-table-border">Salida</th>
+                <th class="os-table-border">Estado</th>
+                <th class="os-table-border">Adultos</th>
+                <th class="os-table-border">Menores</th>
+                <th class="os-table-border">Edad de menor</th>
+                <th class="os-table-border"># Días</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="os-table-border">
+                  <div class="os-dark-theme-dark-txt">
+                    <button
+                      class="bg-green-400 hover:bg-green-500 p-1 rounded overflow-hidden"
+                    >
+                      +
+                    </button>
+                  </div>
+                </td>
+                <td class="os-table-border">Juan Perez</td>
+                <td class="os-table-border">2002-03-04</td>
+                <td class="os-table-border">2022-07-06</td>
+                <td class="os-table-border">2002-08-09</td>
+                <td class="os-table-border">Rechazada</td>
+                <td class="os-table-border">1</td>
+                <td class="os-table-border">2</td>
+                <td class="os-table-border">6</td>
+                <td class="os-table-border">3</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="w-full flex flex-row items-center mt-4 flex-wrap gap-4">
+          <div class="flex flex-row gap-2 items-center sm:items-end">
+            <select
+              name=""
+              id=""
+              class="os-dark-theme-dark-txt os-focus h-8 rounded-md text-sm py-0"
+            >
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+              <option value="30">30</option>
+              <option value="40">40</option>
+              <option value="50">50</option>
+            </select>
+            <p>de un total de 2 registros / Pag. 1 de 1</p>
+          </div>
+
+          <div class="flex flex-row h-max ml-auto">
+            <div class="os-pagination-elem os-focus">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M11 19l-7-7 7-7m8 14l-7-7 7-7"
+                />
+              </svg>
+            </div>
+            <div class="os-pagination-elem os-focus">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </div>
+            <div
+              class="p-1 bg-neutral-50 dark:bg-neutral-900 border border-black/30 dark:border-white/50"
+            >
+              1
+            </div>
+            <div class="os-pagination-elem os-focus">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </div>
+            <div class="os-pagination-elem os-focus">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13 5l7 7-7 7M5 5l7 7-7 7"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
 

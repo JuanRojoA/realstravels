@@ -18,6 +18,110 @@
     <title>Configuracion De Cuenta | Realstravels</title>
   </head>
   <body class="os-body">
+    <!-- Toast notifications -->
+    <div class="os-toast bg-green-400" id="succes-toast">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-5 w-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
+      </svg>
+      Algun Mensaje
+    </div>
+
+    <div class="os-toast bg-red-400" id="error-toast">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
+      </svg>
+      Algun Mensaje
+    </div>
+
+    <!-- Modals -->
+    <!-- Politica -->
+    <div class="os-modal-parent hidden" id="modalAsignarHabitacion">
+      <div class="os-modal">
+        <h3 class="os-subtitle-2 text-center mb-4">Asignar habitacion</h3>
+        <div class="os-input-container my-2">
+          <label for="" class="os-label">Politica</label>
+          <select
+            name=""
+            id="asig-habitacion-select"
+            class="os-form-select h-12 os-focus"
+          >
+            <option value="1">Opcion 1</option>
+            <option value="2">Opcion 1</option>
+            <option value="3">Opcion 1</option>
+            <option value="4">Opcion 1</option>
+            <option value="5">Opcion 1</option>
+            <option value="6">Opcion 1</option>
+          </select>
+        </div>
+        <div class="os-input-container">
+          <label for="" class="os-label">Precio</label>
+          <input
+            type="number"
+            class="os-input os-focus os-dark-theme-dark-txt"
+          />
+        </div>
+        <div class="w-full flex flex-row flex-wrap gap-4 mt-4">
+          <button
+            class="os-button os-button-bg-green ml-auto"
+            id="submit-asig-habitacion-btn"
+          >
+            Definir
+          </button>
+          <button class="os-button os-button-bg-blue btn-close">Cerrar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Crear Habitacion -->
+    <div class="os-modal-parent hidden" id="modalNuevoHabitacion">
+      <div class="os-modal">
+        <h3 class="os-subtitle-2 text-center mb-4">Crear nueva habitacion</h3>
+        <div class="os-input-container my-2">
+          <label for="" class="os-label">Nombre de la habitacion</label>
+          <input
+            type="text"
+            class="os-input os-focus os-dark-theme-dark-txt"
+            id="crear-habitacion-txt"
+          />
+        </div>
+        <div class="os-input-container">
+          <label for="" class="os-label">Descripción de la habitacion</label>
+          <input type="text" class="os-input os-focus os-dark-theme-dark-txt" />
+        </div>
+        <div class="w-full flex flex-row flex-wrap gap-4 mt-4">
+          <button
+            class="os-button os-button-bg-green ml-auto"
+            id="submit-crear-habitacion-btn"
+          >
+            Crear
+          </button>
+          <button class="os-button os-button-bg-blue btn-close">Cerrar</button>
+        </div>
+      </div>
+    </div>
+
     <aside class="relative">
       <div class="os-nav-config">
         <button
@@ -351,8 +455,13 @@
         </div>
 
         <div class="my-4 flex gap-4">
-          <button class="os-button os-button-bg-green">Nueva habitación</button>
-          <button class="os-button os-button-bg-blue">
+          <button
+            class="os-button os-button-bg-green"
+            id="crear-habitacion-btn"
+          >
+            Nueva habitación
+          </button>
+          <button class="os-button os-button-bg-blue" id="asig-habitacion-btn">
             Asignar habitación
           </button>
         </div>
@@ -486,5 +595,89 @@
 
     <script type="module" src="../../main.js"></script>
     <script type="module" src="../../js/nav.js"></script>
+    <script>
+      const modalAsignarHabitacion = document.getElementById(
+        "modalAsignarHabitacion"
+      );
+      const btnAsignarHabitacion = document.getElementById(
+        "asig-habitacion-btn"
+      );
+      const btnClose = document.querySelectorAll(".btn-close");
+      const btnSubmitAsignHabitacion = document.getElementById(
+        "submit-asig-habitacion-btn"
+      );
+      const modalCrearHabitacion = document.getElementById(
+        "modalNuevoHabitacion"
+      );
+      const btnCrearHabitacion = document.getElementById(
+        "crear-habitacion-btn"
+      );
+      const btnSubmitCrearHabitacion = document.getElementById(
+        "submit-crear-habitacion-btn"
+      );
+
+      btnAsignarHabitacion.addEventListener("click", () => {
+        modalAsignarHabitacion.classList.toggle("hidden");
+        modalAsignarHabitacion.classList.toggle("flex");
+      });
+
+      btnCrearHabitacion.addEventListener("click", () => {
+        modalCrearHabitacion.classList.toggle("hidden");
+        modalCrearHabitacion.classList.toggle("flex");
+      });
+
+      btnClose.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          modalAsignarHabitacion.classList.add("hidden");
+          modalAsignarHabitacion.classList.remove("flex");
+          modalCrearHabitacion.classList.add("hidden");
+          modalCrearHabitacion.classList.remove("flex");
+        });
+      });
+
+      btnSubmitAsignHabitacion.addEventListener("click", () => {
+        if (document.getElementById("asig-habitacion-select").value !== "1") {
+          document.getElementById("succes-toast").classList.toggle("show");
+
+          setTimeout(
+            () =>
+              document.getElementById("succes-toast").classList.toggle("show"),
+            3000
+          );
+        } else {
+          document.getElementById("error-toast").classList.toggle("show");
+
+          setTimeout(
+            () =>
+              document.getElementById("error-toast").classList.toggle("show"),
+            3000
+          );
+        }
+        modalAsignarHabitacion.classList.add("hidden");
+        modalAsignarHabitacion.classList.remove("flex");
+      });
+
+      btnSubmitCrearHabitacion.addEventListener("click", () => {
+        if (document.getElementById("crear-habitacion-txt").value !== "") {
+          document.getElementById("succes-toast").classList.toggle("show");
+
+          setTimeout(
+            () =>
+              document.getElementById("succes-toast").classList.toggle("show"),
+            3000
+          );
+        } else {
+          document.getElementById("error-toast").classList.toggle("show");
+
+          setTimeout(
+            () =>
+              document.getElementById("error-toast").classList.toggle("show"),
+            3000
+          );
+        }
+        modalCrearHabitacion.classList.add("hidden");
+        modalCrearHabitacion.classList.remove("flex");
+      });
+    </script>
   </body>
 </html>

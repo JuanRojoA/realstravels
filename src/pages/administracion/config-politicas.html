@@ -18,29 +18,108 @@
     <title>Configuracion De Cuenta | Realstravels</title>
   </head>
   <body class="os-body">
-    <!-- Modals -->
-    <!-- Acierto -->
-    <div
-      class="fixed w-full h-screen top-0 left-0 bg-black/40 z-40 justify-center items-center overflow-y-auto hidden"
-      id="modalPolitica"
-    >
-      <div
-        class="w-4/5 md:w-2/3 lg:w-1/2 bg-neutral-100 dark:bg-neutral-900 shadow-md dark:shadow-white/5 rounded-2xl p-4 sm:p-8 z-50 max-h-96 overflow-y-auto"
+    <!-- Toast notifications -->
+    <div class="os-toast bg-green-400" id="succes-toast">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-5 w-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
       >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
+      </svg>
+      Algun Mensaje
+    </div>
+
+    <div class="os-toast bg-red-400" id="error-toast">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
+      </svg>
+      Algun Mensaje
+    </div>
+
+    <!-- Modals -->
+    <!-- Politica -->
+    <div class="os-modal-parent hidden" id="modalPolitica">
+      <div class="os-modal">
         <h3 class="os-subtitle-2 text-center mb-4">Definir politica</h3>
+        <div class="os-input-container my-2">
+          <label for="" class="os-label">Politica</label>
+          <select
+            name=""
+            id="politica-select"
+            class="os-form-select h-12 os-focus"
+          >
+            <option value="1">Opcion 1</option>
+            <option value="2">Opcion 1</option>
+            <option value="3">Opcion 1</option>
+            <option value="4">Opcion 1</option>
+            <option value="5">Opcion 1</option>
+            <option value="6">Opcion 1</option>
+          </select>
+        </div>
         <div class="os-input-container">
-          <select name="" id="" class="os-form-select h-12 os-focus">
-            <option value="">Opcion 1</option>
-            <option value="">Opcion 1</option>
-            <option value="">Opcion 1</option>
-            <option value="">Opcion 1</option>
-            <option value="">Opcion 1</option>
-            <option value="">Opcion 1</option>
+          <label for="" class="os-label">Cantidad o instrucción</label>
+          <input type="text" class="os-input os-focus os-dark-theme-dark-txt" />
+        </div>
+        <div class="w-full flex flex-row flex-wrap gap-4 mt-4">
+          <button
+            class="os-button os-button-bg-green ml-auto"
+            id="submit-politica-btn"
+          >
+            Definir
+          </button>
+          <button class="os-button os-button-bg-blue btn-close">Cerrar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Aspecto -->
+    <div class="os-modal-parent hidden" id="modalAspecto">
+      <div class="os-modal">
+        <h3 class="os-subtitle-2 text-center mb-4">Definir aspecto</h3>
+        <div class="os-input-container my-2">
+          <label for="" class="os-label">Nombre</label>
+          <input type="text" class="os-input os-focus os-dark-theme-dark-txt" />
+        </div>
+        <div class="os-input-container">
+          <label for="" class="os-label">Tipo</label>
+          <select
+            name=""
+            id="aspecto-select"
+            class="os-form-select h-12 os-focus"
+          >
+            <option value="1">Opcion 1</option>
+            <option value="2">Opcion 1</option>
+            <option value="3">Opcion 1</option>
+            <option value="4">Opcion 1</option>
+            <option value="5">Opcion 1</option>
+            <option value="6">Opcion 1</option>
           </select>
         </div>
         <div class="w-full flex flex-row flex-wrap gap-4 mt-4">
-          <button class="os-button os-button-bg-green ml-auto" id="btn-definir">
-            Definir
+          <button
+            class="os-button os-button-bg-green ml-auto"
+            id="submit-aspecto-btn"
+          >
+            Guardar
           </button>
           <button class="os-button os-button-bg-blue btn-close">Cerrar</button>
         </div>
@@ -509,20 +588,74 @@
     <script type="module" src="../../js/nav.js"></script>
     <script>
       const modalPolitica = document.getElementById("modalPolitica");
+      const modalAspecto = document.getElementById("modalAspecto");
       const btnPolitica = document.getElementById("btn-politica");
+      const btnAspecto = document.getElementById("btn-aspecto");
       const btnClose = document.querySelectorAll(".btn-close");
+      const btnSubmitPolitica = document.getElementById("submit-politica-btn");
+      const btnSubmitAspecto = document.getElementById("submit-aspecto-btn");
 
       btnPolitica.addEventListener("click", () => {
         modalPolitica.classList.toggle("hidden");
         modalPolitica.classList.toggle("flex");
       });
 
+      btnAspecto.addEventListener("click", () => {
+        modalAspecto.classList.toggle("hidden");
+        modalAspecto.classList.toggle("flex");
+      });
+
       btnClose.forEach((btn) => {
         btn.addEventListener("click", () => {
-          console.log("HELOOOOOO");
-          modalPolitica.classList.toggle("hidden");
-          modalPolitica.classList.toggle("flex");
+          modalPolitica.classList.add("hidden");
+          modalPolitica.classList.remove("flex");
+          modalAspecto.classList.add("hidden");
+          modalAspecto.classList.remove("flex");
         });
+      });
+
+      btnSubmitPolitica.addEventListener("click", () => {
+        if (document.getElementById("politica-select").value !== "1") {
+          document.getElementById("succes-toast").classList.toggle("show");
+
+          setTimeout(
+            () =>
+              document.getElementById("succes-toast").classList.toggle("show"),
+            3000
+          );
+        } else {
+          document.getElementById("error-toast").classList.toggle("show");
+
+          setTimeout(
+            () =>
+              document.getElementById("error-toast").classList.toggle("show"),
+            3000
+          );
+        }
+        modalPolitica.classList.add("hidden");
+        modalPolitica.classList.remove("flex");
+      });
+
+      btnSubmitAspecto.addEventListener("click", () => {
+        if (document.getElementById("aspecto-select").value !== "1") {
+          document.getElementById("succes-toast").classList.toggle("show");
+
+          setTimeout(
+            () =>
+              document.getElementById("succes-toast").classList.toggle("show"),
+            3000
+          );
+        } else {
+          document.getElementById("error-toast").classList.toggle("show");
+
+          setTimeout(
+            () =>
+              document.getElementById("error-toast").classList.toggle("show"),
+            3000
+          );
+        }
+        modalAspecto.classList.add("hidden");
+        modalAspecto.classList.remove("flex");
       });
     </script>
   </body>
