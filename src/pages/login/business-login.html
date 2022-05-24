@@ -85,6 +85,7 @@
         </div>
 
         <input
+          id="submit-btn"
           type="submit"
           value="Iniciar Sesión"
           class="os-button focus mt-4 ml-auto"
@@ -160,5 +161,11 @@
     </footer>
 
     <script type="module" src="../../main.js"></script>
+    <script>
+      const btn = document.getElementById("submit-btn");
+      btn.addEventListener("click", () => {
+        window.location.replace("/pages/administracion/config-account.html");
+      });
+    </script>
   </body>
 </html>

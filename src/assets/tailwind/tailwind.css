@@ -645,16 +645,12 @@ select {
   position: relative;
 }
 
-.left-0 {
-  left: 0px;
-}
-
 .top-0 {
   top: 0px;
 }
 
-.left-\[270px\] {
-  left: 270px;
+.left-0 {
+  left: 0px;
 }
 
 .z-50 {
@@ -765,12 +761,12 @@ select {
   margin-top: 0.5rem;
 }
 
-.mb-6 {
-  margin-bottom: 1.5rem;
-}
-
 .mt-auto {
   margin-top: auto;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
 }
 
 .mt-14 {
@@ -869,10 +865,6 @@ select {
 
 .h-72 {
   height: 18rem;
-}
-
-.max-h-72 {
-  max-height: 18rem;
 }
 
 .max-h-96 {
@@ -1122,11 +1114,6 @@ select {
   background-color: rgb(59 130 246 / var(--tw-bg-opacity));
 }
 
-.bg-neutral-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(163 163 163 / var(--tw-bg-opacity));
-}
-
 .bg-amber-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(251 191 36 / var(--tw-bg-opacity));
@@ -1196,10 +1183,6 @@ select {
 
 .p-2 {
   padding: 0.5rem;
-}
-
-.p-8 {
-  padding: 2rem;
 }
 
 .p-12 {
@@ -1668,6 +1651,7 @@ div::-webkit-scrollbar {
 .os-config-main {
   left: 270px;
   top: 0px;
+  margin-top: 3.5rem;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -1679,6 +1663,7 @@ div::-webkit-scrollbar {
 @media (min-width: 640px) {
   .os-config-main {
     position: absolute;
+    margin-top: 0px;
     width: calc(100% - 270px);
     padding: 2rem;
   }
@@ -2341,11 +2326,6 @@ div::-webkit-scrollbar {
   background-color: rgb(23 23 23 / var(--tw-bg-opacity));
 }
 
-.dark .dark\:bg-neutral-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(38 38 38 / var(--tw-bg-opacity));
-}
-
 .dark .dark\:bg-white\/30 {
   background-color: rgb(255 255 255 / 0.3);
 }
@@ -2366,10 +2346,6 @@ div::-webkit-scrollbar {
 }
 
 @media (min-width: 640px) {
-  .sm\:fixed {
-    position: fixed;
-  }
-
   .sm\:col-span-4 {
     grid-column: span 4 / span 4;
   }
@@ -2406,10 +2382,6 @@ div::-webkit-scrollbar {
     height: 420px;
   }
 
-  .sm\:min-h-screen {
-    min-height: 100vh;
-  }
-
   .sm\:w-1\/2 {
     width: 50%;
   }
@@ -2418,10 +2390,6 @@ div::-webkit-scrollbar {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-  }
-
-  .sm\:max-w-\[270px\] {
-    max-width: 270px;
   }
 
   .sm\:items-end {

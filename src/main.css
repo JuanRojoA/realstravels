@@ -115,7 +115,7 @@ div::-webkit-scrollbar {
 
 /* Admin tools main */
 .os-config-main {
-  @apply h-max w-full sm:w-[calc(100%_-_270px)] sm:absolute left-[270px] top-0 p-4 sm:p-8 overflow-y-scroll;
+  @apply h-max w-full sm:w-[calc(100%_-_270px)] sm:absolute left-[270px] top-0 p-4 sm:p-8 mt-14 sm:mt-0  overflow-y-scroll;
 }
 
 /* Nav */
