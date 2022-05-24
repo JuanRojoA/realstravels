@@ -18,6 +18,88 @@
     <title>Configuracion De Cuenta | Realstravels</title>
   </head>
   <body class="os-body">
+    <!-- Toast notifications -->
+    <div class="os-toast bg-green-400" id="succes-toast">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-5 w-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
+      </svg>
+      Algun Mensaje
+    </div>
+
+    <div class="os-toast bg-red-400" id="error-toast">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
+      </svg>
+      Algun Mensaje
+    </div>
+
+    <!-- Modal -->
+    <div class="os-modal-parent hidden" id="modalReserva">
+      <div class="os-modal">
+        <h3 class="os-subtitle-2 text-center">Datos reserva</h3>
+        <div class="my-8 max-w-xs mx-auto bg-black/20 p-4 rounded-md">
+          <div class="flex flex-row justify-between">
+            <p class="os-subtitle-5">Cantidad</p>
+            <p>2</p>
+          </div>
+          <div class="flex flex-row justify-between">
+            <p class="os-subtitle-5">Tipo de habitación</p>
+            <p>Dobles</p>
+          </div>
+          <div class="flex flex-row justify-between">
+            <p class="os-subtitle-5">Precio unitario</p>
+            <p>$300.000</p>
+          </div>
+          <div class="flex flex-row justify-between">
+            <p class="os-subtitle-5">Numero de días</p>
+            <p>3</p>
+          </div>
+          <div class="flex flex-row justify-between">
+            <p class="os-subtitle-5">Subtotal</p>
+            <p>$1.800.000</p>
+          </div>
+          <div class="flex flex-row justify-between">
+            <p class="os-subtitle-5 underline">Valor Total</p>
+            <p>$1.800.000</p>
+          </div>
+        </div>
+        <div class="w-full flex flex-row flex-wrap gap-4">
+          <button
+            class="os-button os-button-bg-green ml-auto"
+            id="aceptar-reserva"
+          >
+            Aceptar
+          </button>
+          <button class="os-button os-button-bg-red" id="rechazar-reserva">
+            Rechazar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pagina -->
     <aside class="relative">
       <div class="os-nav-config">
         <button
@@ -371,12 +453,10 @@
             <tbody>
               <tr>
                 <td class="os-table-border">
-                  <div class="os-dark-theme-dark-txt">
-                    <button
-                      class="bg-green-400 hover:bg-green-500 p-1 rounded overflow-hidden"
-                    >
-                      +
-                    </button>
+                  <div
+                    class="os-dark-theme-dark-txt bg-green-400 hover:bg-green-500 p-1 px-2 rounded overflow-hidden btn-reserva text-lg font-bold"
+                  >
+                    +
                   </div>
                 </td>
                 <td class="os-table-border">Juan Perez</td>
@@ -488,5 +568,42 @@
 
     <script type="module" src="../../main.js"></script>
     <script type="module" src="../../js/nav.js"></script>
+
+    <script>
+      const modalReserva = document.getElementById("modalReserva");
+      const btnReserva = document.querySelectorAll(".btn-reserva");
+      const btnAceptar = document.getElementById("aceptar-reserva");
+      const btnRechazar = document.getElementById("rechazar-reserva");
+
+      btnReserva.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          modalReserva.classList.remove("hidden");
+          modalReserva.classList.add("flex");
+        });
+      });
+
+      btnAceptar.addEventListener("click", () => {
+        document.getElementById("succes-toast").classList.toggle("show");
+
+        setTimeout(
+          () =>
+            document.getElementById("succes-toast").classList.toggle("show"),
+          3000
+        );
+        modalReserva.classList.add("hidden");
+        modalReserva.classList.remove("flex");
+      });
+
+      btnRechazar.addEventListener("click", () => {
+        document.getElementById("error-toast").classList.toggle("show");
+
+        setTimeout(
+          () => document.getElementById("error-toast").classList.toggle("show"),
+          3000
+        );
+        modalReserva.classList.add("hidden");
+        modalReserva.classList.remove("flex");
+      });
+    </script>
   </body>
 </html>

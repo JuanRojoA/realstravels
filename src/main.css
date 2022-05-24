@@ -98,6 +98,10 @@ div::-webkit-scrollbar {
   @apply border-blue-400 hover:bg-blue-400 dark:hover:bg-blue-400;
 }
 
+.os-button-bg-red {
+  @apply border-red-400 hover:bg-red-400 dark:hover:bg-red-400;
+}
+
 .os-theme-btn {
   @apply absolute left-1/2 -top-5 -translate-x-1/2 w-20 h-10 bg-black dark:bg-white text-neutral-50 dark:text-neutral-900   rounded-md hover:opacity-75 focus-visible:opacity-75 transition-all;
 }
@@ -305,7 +309,7 @@ div::-webkit-scrollbar {
 /* Modal */
 
 .os-modal-parent {
-  @apply fixed w-full h-screen top-0 left-0 bg-black/40 z-40 justify-center items-center overflow-y-auto p-2;
+  @apply fixed w-full h-screen top-0 left-0 bg-black/40 justify-center items-center overflow-y-auto p-2 z-[100];
 }
 
 .os-modal {
